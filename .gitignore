@@ -27,6 +27,9 @@ site/data/matches.json
 site/assets/app.js
 site/assets/app.js.map
 site/assets/flags/
+# Generated from site/guide.md + site/assets/guide-template.html by
+# scripts/build.mjs on every build/deploy. Source lives in those two files.
+site/guide.html
 
 # Local Node noise
 node_modules/
