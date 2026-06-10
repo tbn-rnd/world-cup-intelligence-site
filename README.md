@@ -4,15 +4,6 @@ Dynamic HTML site that surfaces all 104 World Cup 2026 matches with
 deterministic popularity tiering, deep fan-flow and hospitality context on the
 matches that draw the most interest, and a navigation guide.
 
-## Status
-
-| Plan | Subsystem                                                | State       |
-|------|----------------------------------------------------------|-------------|
-| A    | Backend: fixtures (104), popularity, agent tier gate     | complete    |
-| B    | Frontend: lite/full tiles, popularity badges, drop F&B   | complete    |
-| C    | Navigation guide (HTML + printable Markdown)             | complete    |
-| D    | Docs cleanup                                             | complete    |
-
 ## Running locally
 
 ```bash
