@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide · World Cup 2026 Insight Aggregator</title>
+    <meta name="theme-color" content="#0a1628" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Geist:wght@300..700&family=JetBrains+Mono:wght@400..600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="guide-body">
+    <div class="grain" aria-hidden="true"></div>
+    <header class="guide-header">
+      <a class="guide-back" href="index.html">← Back to Insight Aggregator</a>
+    </header>
+    <main class="guide-main">
+      <div class="guide-legal" role="note" aria-label="Legal notice">
+  <strong>Legal notice.</strong> This site is not a sponsor, partner, or affiliate of FIFA or the 2026 World Cup. Content is descriptive context only.
+</div><h1>World Cup 2026 Insight Aggregator — Guide</h1>
+<p>A short orientation for anyone using the World Cup 2026 Insight Aggregator.</p>
+<p>The site is a single place to look up every match of the World Cup 2026 (11 June – 19 July 2026), check which ones are drawing the most attention, and read background context on the teams and their traveling fans. It is descriptive — not a sponsor, partner, or affiliate of FIFA or the 2026 World Cup. Content is intended as general background context, not operational guidance.</p>
+<h2>What you&#39;ll see when you open the site</h2>
+<p>A typical landing experience, top to bottom:</p>
+<ol>
+<li><strong>A status banner</strong> with the tournament phase, the time until the next kickoff, and a count of matches. The banner updates as filters are applied.</li>
+<li><strong>A &quot;Next Up&quot; card</strong> with the next high-attention match: teams, kickoff date and time, host city, and a one-sentence headline.</li>
+<li><strong>Filters</strong> — a row of team chips for following one nation&#39;s fixtures across the whole tournament, plus dropdowns for host city, popularity tier, and tournament phase.</li>
+<li><strong>The match list</strong> — every match in the tournament, in date order. Each is a tile that can be expanded for a deeper brief.</li>
+</ol>
+<p>That is the entire site. Everything below the banner is the same idea repeated for 104 matches.</p>
+<h2>The match list</h2>
+<p>Every match in the tournament is rendered as a tile. Tiles are the same shape whether the teams are confirmed or still pending the bracket; the contents differ.</p>
+<p>A tile shows:</p>
+<ul>
+<li><strong>Date strip</strong> — kickoff date and local time, host city, and tournament phase (Group Stage, Round of 16, etc.).</li>
+<li><strong>Popularity badge</strong> — <code>Popular</code>, <code>Moderate</code>, or <code>Standard</code>. Top right of the tile.</li>
+<li><strong>Match body</strong> — for confirmed matches: the two teams with flags, FIFA ranks, and a model estimate of each team&#39;s chance of winning. For TBD knockout matches: the candidate teams who could fill the slot, and the most-likely matchups.</li>
+<li><strong>Popularity rationale</strong> — one short sentence describing what triggered the badge.</li>
+<li><strong>Venue + &quot;View brief&quot; button</strong> — the button opens a deeper card with the match brief.</li>
+</ul>
+<h2>Match popularity</h2>
+<p>Every match carries one of three popularity labels. Assignment is automatic and rule-based — there is no manual curation.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Approximately what it means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Popular</strong></td>
+<td>The match is likely to draw a wider audience: finals and semi-finals, matches involving a FIFA top-10 team, host-nation matches (USA, Mexico, Canada), or matches involving a team with a long-established global following.</td>
+</tr>
+<tr>
+<td><strong>Moderate</strong></td>
+<td>Knockout matches that didn&#39;t qualify as Popular, and group-stage matches with at least one FIFA top-25 team.</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Most other group-stage matches between teams outside the FIFA top 25.</td>
+</tr>
+</tbody></table>
+<p>The rationale line on each tile names the specific trigger (&quot;Host-nation match (Mexico),&quot; &quot;Group stage; teams outside the top 25 FIFA,&quot; and so on). If a tier looks surprising, that line is the reason.</p>
+<p>The full rule set is in the reference section at the bottom of this guide.</p>
+<h2>Filtering</h2>
+<p>A row of team chips sits at the top of the filter area — click a team to narrow the match list to that team&#39;s fixtures across the whole tournament. The chips cover the nine global-following sides whose traveling fans drive the largest international flows: Brazil, Argentina, England, France, Germany, Spain, Portugal, Netherlands, Belgium. A <code>✕ Clear</code> link appears next to the row once a team is selected.</p>
+<p>Three dropdown filters sit below the team chips:</p>
+<ul>
+<li><strong>City</strong> — narrow to matches in a single host city.</li>
+<li><strong>Popularity</strong> — narrow to one tier.</li>
+<li><strong>Phase</strong> — narrow to one stage of the tournament (Group Stage, Round of 32, etc.).</li>
+</ul>
+<p>Filters compose: a selected team chip plus the dropdowns narrow to the intersection. The banner countdown and the totals on the right both update with the filter, so the &quot;next kickoff&quot; timer reflects only matches in the filtered set. When the filter has no upcoming match, the countdown reads <code>No upcoming matches in filter</code>.</p>
+<h2>The brief</h2>
+<p>Clicking <strong>View brief</strong> on any tile opens a deeper card. Every match has a brief.</p>
+<p>A brief contains:</p>
+<ul>
+<li><strong>Headline</strong> — one neutral sentence summarizing the matchup and its traveling-fan profile.</li>
+<li><strong>Scenario summary</strong> — for TBD knockout matches, a paragraph on the most-likely matchup landscape. Not present for confirmed matches.</li>
+<li><strong>Fan demographics</strong> — who travels for this team and from where, grounded in diaspora data.</li>
+<li><strong>Traveling volume estimate</strong> — light, moderate, or heavy, with the reasoning.</li>
+<li><strong>Cultural context</strong> — food traditions, religious or dietary observances, language patterns, and fan rituals.</li>
+</ul>
+<p>Briefs are background. They describe; they do not recommend. Any operational interpretation belongs to the property.</p>
+<h2>TBD knockout matches</h2>
+<p>Many knockout slots have no confirmed teams yet — the bracket has not progressed that far. A TBD tile shows:</p>
+<ul>
+<li><strong>Feeder distributions</strong> — the probability that each candidate team (a group winner, runner-up, or third-place qualifier) ends up in this slot.</li>
+<li><strong>Specific matchups</strong> — the three most-likely team-vs-team pairings, with joint probabilities.</li>
+<li><strong>Decides-in countdown</strong> — a small ring with <code>Decides in Xd</code> showing how many days until the slot&#39;s teams are fully known. The same label appears on the Next Up card for TBD matches.</li>
+<li><strong>Confidence label</strong> — <code>Confidence high</code>, <code>medium</code>, or <code>low</code> next to the venue, indicating how sharply the model can already pick the most-likely matchup. Confidence rises as feeder distributions concentrate on fewer candidates.</li>
+</ul>
+<p>A TBD slot&#39;s popularity badge can change. A Round of 16 slot may begin as <code>Moderate</code> because no specific team is confirmed yet, then upgrade to <code>Popular</code> once one candidate team passes a confidence threshold and that team meets a Popular trigger.</p>
+<h2>Win probability</h2>
+<p>Confirmed matches display a model estimate of each team&#39;s chance of winning, derived from the teams&#39; FIFA rankings using an Elo-style heuristic. It is a data signal, not bookmaker odds.</p>
+<ul>
+<li><strong>Group-stage and friendly matches</strong> show a draw probability alongside each team&#39;s win probability.</li>
+<li><strong>Knockout matches</strong> show a two-way split — one team must advance, so the model folds in extra time and penalties.</li>
+</ul>
+<p>The percentages reflect FIFA rankings at the time of the last data refresh.</p>
+<h2>Data refresh and the status banner</h2>
+<p>A single line at the top of the page shows:</p>
+<ul>
+<li><strong>Tournament phase</strong> — <code>Pre-Tournament</code>, <code>&lt;Phase&gt; active</code>, <code>Tournament Complete</code>, or <code>Off-Season</code> when no matches are in range.</li>
+<li><strong>Countdown</strong> — time to the next kickoff in days, hours, or minutes.</li>
+<li><strong>Match counts</strong> — total, confirmed, and TBD.</li>
+</ul>
+<p>The match data is refreshed on a schedule — every hour through pre-tournament and the group stage (11 June – 27 June 2026), and every 30 minutes once the knockout phase begins on 28 June 2026, when results move the brackets faster. The header carries a <code>Last refreshed …</code> timestamp of when the underlying data was last written. If the upstream data source is unreachable, the header reads <code>Offline · last refreshed …</code> and the site continues to show the last known good snapshot.</p>
+<hr>
+<h2>Reference</h2>
+<h3>Popularity rules in full</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>All triggers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Popular</strong></td>
+<td>Match phase is Final, Semi-final, or Bronze-final. Or any team is FIFA top-10. Or (group stage) any team is a host nation (USA, Mexico, Canada). Or (group stage) any team is a long-established global-following side: Brazil, Argentina, France, England, Germany, Spain, Portugal, Netherlands, Belgium.</td>
+</tr>
+<tr>
+<td><strong>Moderate</strong></td>
+<td>Any knockout round (R32, R16, Quarter-final) that did not already qualify as Popular. Or a group-stage match where at least one team is FIFA top-25.</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Everything else — most often group-stage matches between teams outside the top 25.</td>
+</tr>
+</tbody></table>
+<h3>How TBD-slot probabilities are computed</h3>
+<p>The feeder distributions on each TBD tile and the most-likely matchups in the expanded card combine match-winner odds from the Odds API with the official 2026 World Cup bracket structure.</p>
+<p>Group-stage standings are derived by closed-form enumeration over all 729 possible outcomes within each four-team group (three wins, draws, or losses across three matches each). Downstream knockout-slot probabilities are then computed by a 10,000-iteration Monte Carlo simulation against the bracket structure, propagating the group-stage distribution through R32, R16, quarter-finals, and beyond.</p>
+<p>Confirmed-match win probabilities (the per-team percentages shown on a confirmed tile) are derived separately, from FIFA rankings using an Elo-style heuristic — they are a data signal, not bookmaker odds.</p>
+<h3>Glossary</h3>
+<ul>
+<li><strong>Bracket slot</strong> — A position in the knockout tree, filled by the winner or qualifier of an earlier stage. A slot whose teams are not yet known is rendered as a TBD tile.</li>
+<li><strong>Bronze final</strong> — The third-place playoff, played the day before the Final.</li>
+<li><strong>Confirmed match</strong> — A match whose two teams are known. All 72 group-stage matches are confirmed before kickoff; knockout matches become confirmed as the bracket resolves.</li>
+<li><strong>Decides in</strong> — The countdown on a TBD tile showing how many days until that slot&#39;s teams are fully confirmed (rendered as <code>Decides in Xd</code>).</li>
+<li><strong>Diaspora</strong> — Communities of a team&#39;s nationality living abroad. Used to estimate traveling fan volume.</li>
+<li><strong>Feeder distribution</strong> — For a TBD knockout slot, the probability that each candidate team fills the slot.</li>
+<li><strong>FIFA rank</strong> — World football&#39;s official team ranking. Lower numbers are stronger; FIFA #1 is the top-ranked nation.</li>
+<li><strong>Global-following side</strong> — A team whose appearance reliably draws an out-of-market audience: Brazil, Argentina, France, England, Germany, Spain, Portugal, Netherlands, Belgium.</li>
+<li><strong>Group stage</strong> — The opening round: 12 groups of 4, 72 matches in total. Top two from each group plus the eight best third-placed teams advance.</li>
+<li><strong>Host city</strong> — The metro region of the venue.</li>
+<li><strong>Host nation</strong> — USA, Mexico, or Canada — the tournament&#39;s three co-hosts.</li>
+<li><strong>Kickoff (local vs UTC)</strong> — The local time is the time at the venue. The UTC time is the same moment in Coordinated Universal Time, useful for time-zone comparisons.</li>
+<li><strong>Knockout phase</strong> — Single-elimination rounds from Round of 32 through the Final.</li>
+<li><strong>Phase</strong> — Where a match sits in the tournament: group stage, R32, R16, quarter-final, semi-final, bronze final, or final.</li>
+<li><strong>Popularity rationale</strong> — The short sentence on each tile naming the trigger that produced the popularity tier.</li>
+<li><strong>Quarter-final</strong> — The eight teams remaining after Round of 16 play four matches to reach the semi-finals.</li>
+<li><strong>Round of 16</strong> — The eight matches following Round of 32; sixteen teams enter, eight advance.</li>
+<li><strong>Round of 32</strong> — The first knockout round in the 48-team format. Thirty-two teams enter, sixteen advance.</li>
+<li><strong>Scenario</strong> — In a TBD knockout slot, a specific team-vs-team matchup that could fill the slot, with its probability.</li>
+<li><strong>Semi-final</strong> — Two matches that decide the two finalists.</li>
+<li><strong>TBD</strong> — A knockout slot whose teams are not yet known. Carries scenarios and feeder distributions instead of confirmed teams.</li>
+<li><strong>Win probability</strong> — A model estimate of each team&#39;s chance of winning a confirmed match, derived from FIFA rankings (not bookmaker odds).</li>
+</ul>
+<h2>Questions</h2>
+<p>For site questions or data corrections, open an issue on the repository.</p>
+<div class="guide-legal" role="note" aria-label="Legal notice">
+  <strong>Legal notice.</strong> This site is not a sponsor, partner, or affiliate of FIFA or the 2026 World Cup. Content is descriptive context only.
+</div>
+
+    </main>
+    <footer class="guide-footer">
+      <span>World Cup 2026 · Insight Aggregator</span>
+    </footer>
+  </body>
+</html>

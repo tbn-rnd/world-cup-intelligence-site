@@ -1,0 +1,60 @@
+name: deploy-pages
+
+on:
+  # Any push to main that affects the deployed surface area:
+  # site content, the frontend source that builds into site/assets,
+  # the build scripts themselves, or the deploy workflow.
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "src/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - ".github/workflows/deploy-pages.yml"
+  # refresh-match-data commits to main via GITHUB_TOKEN, which doesn't
+  # re-trigger the `push` event. Listen for it completing instead.
+  workflow_run:
+    workflows: ["refresh-match-data"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, but don't cancel in-progress runs —
+# we want every commit to main eventually deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      # Builds site/assets/app.js, app.js.map, site/assets/flags/*,
+      # and site/guide.html from source. None of these are tracked in
+      # git — they're regenerated on every deploy.
+      - run: npm run build
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/
+      - id: deployment
+        uses: actions/deploy-pages@v5

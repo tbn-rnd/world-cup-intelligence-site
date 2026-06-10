@@ -1,0 +1,21 @@
+tournament: "World Cup 2026"
+matches:
+  - id: mex-2026-06-11-grpA-mex-kor
+    kickoff_local: "2026-06-11T12:00:00-06:00"
+    kickoff_utc:   "2026-06-11T18:00:00Z"
+    host_city: Mexico City
+    venue: Estadio Azteca
+    phase: group_stage
+    status: confirmed
+    group: A
+    confirmed_teams: [MEX, KOR]
+
+  - id: nyj-2026-06-30-r32-a1-vs-f2
+    kickoff_local: "2026-06-30T17:00:00-04:00"
+    kickoff_utc:   "2026-06-30T21:00:00Z"
+    host_city: NY/NJ
+    venue: MetLife Stadium
+    phase: round_of_32
+    status: tbd
+    bracket_slot: r32_match_75
+    decision_date: "2026-06-27"

@@ -1,0 +1,57 @@
+# Cached api-football team IDs, keyed by FIFA 3-letter code.
+# Populated automatically by backend/sync_recent_form.py on first run.
+# Delete an entry to force re-discovery of that team's ID.
+
+team_ids:
+  ALG: 1532
+  ARG: 26
+  AUS: 20
+  AUT: 775
+  BEL: 1
+  BIH: 1113
+  BRA: 6
+  CAN: 5529
+  CIV: 1501
+  CMR: 1530
+  COD: 1508
+  COL: 8
+  CPV: 1533
+  CRC: 29
+  CRO: 3
+  CZE: 770
+  DEN: 21
+  ECU: 2382
+  EGY: 32
+  ENG: 10
+  ESP: 9
+  FRA: 2
+  GER: 25
+  GHA: 1504
+  HAI: 2386
+  IRN: 22
+  IRQ: 1567
+  ITA: 768
+  JOR: 1548
+  JPN: 12
+  KOR: 17
+  KSA: 23
+  MAR: 31
+  MEX: 16
+  NED: 1118
+  NGA: 19
+  NOR: 1090
+  NZL: 4673
+  PAN: 11
+  PAR: 2380
+  PER: 30
+  POR: 27
+  QAT: 1569
+  RSA: 1531
+  SCO: 1108
+  SEN: 13
+  SUI: 15
+  SWE: 5
+  TUN: 28
+  URU: 7
+  USA: 2384
+  UZB: 1568

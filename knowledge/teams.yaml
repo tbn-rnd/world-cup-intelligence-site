@@ -1,0 +1,1655 @@
+# Curated team profiles for the World Cup 2026 Insight Aggregator.
+# Sources:
+#   - FIFA rankings: https://www.fifa.com/fifa-world-ranking/men   (last updated 2026-04)
+#   - US diaspora: US Census Bureau ACS 5-year estimates (latest available)
+#   - Cultural/F&B notes: hand-authored from publicly available cultural references
+# Update FIFA ranks monthly; diaspora numbers as new ACS releases drop.
+
+# Schema (each team is a top-level key by 3-letter FIFA code):
+#   name: full team name
+#   fifa_rank: integer
+#   us_diaspora:
+#     population_millions: float
+#     primary_concentrations: [state names]
+#     georgia_concentration: low | moderate | high
+#   fan_culture:
+#     travel_propensity: low | moderate | high | very_high
+#     color_signal: short string
+#     notable_traditions: [strings]
+#   hospitality_notes:
+#     fnb_priorities: [strings]
+#     language: [strings]
+#     dietary: standard | halal | kosher | vegetarian_strong | other
+#     rate_signal: string
+#   cuisine_signatures:
+#     - { dish: string, note: string }
+#   diaspora_travel_signal:
+#     origin_pattern: string
+#     dining_pattern: string
+#   recent_form_summary: string
+
+teams:
+
+  MAR:
+    name: Morocco
+    fifa_rank: 14
+    us_diaspora:
+      population_millions: 0.12
+      primary_concentrations: [New York, Florida, Massachusetts, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: red and green
+      notable_traditions:
+        - "Family-oriented travel parties"
+        - "Strong post-2022 World Cup semifinal fan growth"
+        - "Multi-generational attendance"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified proteins across all shared lines"
+        - "Mediterranean-North African fusion plates"
+        - "Late dining (Mediterranean culture)"
+      language: ["French-speaking concierge essential", "Arabic-speaking front desk a plus"]
+      dietary: halal
+      rate_signal: "Very high suite demand post-2022; aggressive premium pricing supported"
+    cuisine_signatures:
+      - { dish: "Tagine with merguez and preserved-lemon couscous", note: "Authentic prep > Americanized adaptation" }
+      - { dish: "Mint tea service in lobby", note: "Standard hospitality marker; cheap to execute, high cultural-fit signal" }
+      - { dish: "Moroccan pastry station (chebakia, briouats)", note: "Strong breakfast and afternoon-tea draw" }
+    diaspora_travel_signal:
+      origin_pattern: "France and Northeast US heavy; substantial international arrivals direct from Casablanca"
+      dining_pattern: "Late dinners (21:00+), large family parties, family-style preferred"
+    recent_form_summary: "Four wins and two draws across recent friendlies, highlighted by commanding victories over Burundi and Madagascar and a narrow edge over Paraguay heading into 2026."
+
+  USA:
+    name: United States
+    fifa_rank: 16
+    us_diaspora:
+      population_millions: 330.0
+      primary_concentrations: [California, Texas, Florida, New York, Georgia]
+      georgia_concentration: high
+    fan_culture:
+      travel_propensity: high
+      color_signal: red, white, and blue
+      notable_traditions: ["Tailgate culture", "AO supporters group"]
+    hospitality_notes:
+      fnb_priorities: ["American game-day fare elevated", "Local craft beer program"]
+      language: ["English"]
+      dietary: standard
+      rate_signal: "Steady premium suite demand for marquee fixtures"
+    cuisine_signatures:
+      - { dish: "Regional barbecue station (Atlanta-specific for ATL property)", note: "Local pride matters" }
+      - { dish: "Premium burger and craft beer pairing", note: "Reliable suite anchor" }
+    diaspora_travel_signal:
+      origin_pattern: "Domestic; Northeast and Southeast feeders for ATL matches"
+      dining_pattern: "Pre-match heavy, late post-match light bites"
+    recent_form_summary: "Building toward home World Cup; mixed 2024-25 results, generational squad."
+
+  POR:
+    name: Portugal
+    fifa_rank: 6
+    us_diaspora:
+      population_millions: 1.5
+      primary_concentrations: [Massachusetts, Rhode Island, New Jersey, California, Florida]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: red and green
+      notable_traditions: ["Cristiano Ronaldo premium-experience appeal", "Family travel"]
+    hospitality_notes:
+      fnb_priorities: ["Portuguese seafood (bacalhau)", "Port wine program", "Pastéis de nata"]
+      language: ["Portuguese-speaking concierge"]
+      dietary: standard
+      rate_signal: "High premium suite demand driven by Ronaldo factor"
+    cuisine_signatures:
+      - { dish: "Bacalhau à brás brunch station", note: "Authentic Portuguese signal" }
+      - { dish: "Pastéis de nata with espresso pairing", note: "Universal Portuguese cultural anchor" }
+      - { dish: "Port wine flight", note: "Premium beverage program lifts suite spend" }
+    diaspora_travel_signal:
+      origin_pattern: "Northeast US (MA, RI, NJ) heavy; substantial direct from Lisbon"
+      dining_pattern: "Late dinners typical, multi-course family-style"
+    recent_form_summary: "Three consecutive pre-tournament friendlies unbeaten — wins over Chile and USA bookending a draw with Mexico — as Portugal fine-tunes ahead of the 2026 World Cup."
+
+  RSA:
+    name: South Africa
+    fifa_rank: 58
+    us_diaspora:
+      population_millions: 0.10
+      primary_concentrations: [California, New York, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: green and gold
+      notable_traditions: ["Vuvuzela culture", "Bafana Bafana chants"]
+    hospitality_notes:
+      fnb_priorities: ["Standard international menu", "Wine program (SA wines a plus)"]
+      language: ["English"]
+      dietary: standard
+      rate_signal: "Limited diaspora travel; standard pricing"
+    cuisine_signatures:
+      - { dish: "Boerewors and braai sliders", note: "Cultural marker, easy to execute" }
+      - { dish: "South African wine flight", note: "Pinotage, Chenin Blanc — premium beverage signal" }
+    diaspora_travel_signal:
+      origin_pattern: "Light; mostly direct from Johannesburg/Cape Town"
+      dining_pattern: "Standard"
+    recent_form_summary: "Four-match pre-tournament friendly run yielding one win-less stretch: draws against Jamaica and Nicaragua bookending a split series against Panama."
+
+  CZE:
+    name: Czech Republic
+    fifa_rank: 36
+    us_diaspora:
+      population_millions: 1.6
+      primary_concentrations: [Texas, Illinois, Ohio, Wisconsin, Nebraska]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red, white, and blue
+      notable_traditions: ["Strong beer culture", "Polite, organized supporters"]
+    hospitality_notes:
+      fnb_priorities: ["Pilsner-style beer program", "Central European fare"]
+      language: ["Czech (limited need)", "English typically sufficient"]
+      dietary: standard
+      rate_signal: "Moderate demand; standard pricing"
+    cuisine_signatures:
+      - { dish: "Pilsner Urquell on tap", note: "Most recognizable Czech cultural anchor" }
+      - { dish: "Goulash and dumpling lunch station", note: "Hearty, easy execution" }
+    diaspora_travel_signal:
+      origin_pattern: "Limited domestic; direct from Prague modest"
+      dining_pattern: "Standard, beer-forward"
+    recent_form_summary: "Back-to-back friendly wins over Kosovo and Guatemala heading into the tournament, posting five goals across two matches."
+
+  HAI:
+    name: Haiti
+    fifa_rank: 83
+    us_diaspora:
+      population_millions: 1.1
+      primary_concentrations: [Florida, New York, Massachusetts, Georgia]
+      georgia_concentration: high
+    fan_culture:
+      travel_propensity: high
+      color_signal: blue and red
+      notable_traditions: ["Proud diaspora, multi-generational fan base"]
+    hospitality_notes:
+      fnb_priorities: ["Haitian/Caribbean menu options", "French Caribbean rum program"]
+      language: ["Haitian Creole and French-speaking concierge", "English secondary"]
+      dietary: standard
+      rate_signal: "Strong diaspora-driven demand, especially in FL and NY/NJ"
+    cuisine_signatures:
+      - { dish: "Griot (fried pork shoulder) and pikliz", note: "Iconic Haitian dish; Atlanta diaspora will recognize immediately" }
+      - { dish: "Rum punch and Barbancourt program", note: "Premium Haitian rum lifts beverage spend" }
+      - { dish: "Soup joumou breakfast", note: "Cultural touchstone, exceptional respect signal" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida (Miami, Orlando), Northeast US, Atlanta metro"
+      dining_pattern: "Family-style, multi-generational, communal"
+    recent_form_summary: "Mixed recent form across five fixtures: a dominant 4-0 win over New Zealand contrasts with losses to Peru and Tunisia and a draw with Iceland, punctuated by a qualification win over Nicaragua."
+
+  UZB:
+    name: Uzbekistan
+    fifa_rank: 65
+    us_diaspora:
+      population_millions: 0.05
+      primary_concentrations: [New York, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: blue and green
+      notable_traditions: ["Limited US-side traveling fanbase"]
+    hospitality_notes:
+      fnb_priorities: ["Halal-friendly options recommended", "Central Asian items optional"]
+      language: ["Russian as fallback", "Limited Uzbek need"]
+      dietary: halal
+      rate_signal: "Low demand; treat as overflow capacity"
+    cuisine_signatures:
+      - { dish: "Plov (Uzbek rice pilaf) station", note: "Recognizable for the small traveling fanbase" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light; mostly direct from Tashkent if any"
+      dining_pattern: "Standard halal expectations"
+    recent_form_summary: "Two recent losses to Netherlands and Canada bookend a mixed run featuring a penalty-draw with Venezuela and a 3-1 win over Gabon in early 2026 FIFA Series play."
+
+  COD:
+    name: DR Congo
+    fifa_rank: 50
+    us_diaspora:
+      population_millions: 0.04
+      primary_concentrations: [Texas, New York, Maryland]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: sky blue and yellow
+      notable_traditions: ["Strong African football identity", "Limited US travel"]
+    hospitality_notes:
+      fnb_priorities: ["Standard international menu"]
+      language: ["French-speaking concierge a plus"]
+      dietary: standard
+      rate_signal: "Low demand; standard pricing"
+    cuisine_signatures:
+      - { dish: "Moambe chicken station", note: "Recognizable Central African dish" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light"
+      dining_pattern: "Standard"
+    recent_form_summary: "Returning African nation; AFCON 2024 semifinal run."
+
+  # ── Likely knockout participants ──────────────────────────────────────────────
+
+  MEX:
+    name: Mexico
+    fifa_rank: 15
+    us_diaspora:
+      population_millions: 37.0
+      primary_concentrations: [California, Texas, Illinois, Arizona, Georgia]
+      georgia_concentration: high
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: green, white, and red
+      notable_traditions:
+        - "El Tri faithful travel in massive numbers to every World Cup"
+        - "Late-night celebrations extending well past midnight"
+        - "Raucous supporter culture with flags, face paint, and mariachi"
+    hospitality_notes:
+      fnb_priorities:
+        - "Authentic Mexican street food station (tacos al pastor, elotes)"
+        - "Premium tequila and mezcal program"
+        - "Agua fresca and horchata non-alcoholic options"
+      language: ["Spanish-speaking concierge essential", "Bilingual signage recommended"]
+      dietary: standard
+      rate_signal: "Extremely high demand; aggressive suite pricing fully supported by diaspora volume"
+    cuisine_signatures:
+      - { dish: "Tacos al pastor station with full toppings bar", note: "Crowd favorite; scales well for large groups" }
+      - { dish: "Guacamole and tortilla chip bar (tableside)", note: "Premium presentation lifts perceived value" }
+      - { dish: "Mezcal and tequila flight", note: "Premium beverage anchor; high per-head spend potential" }
+    diaspora_travel_signal:
+      origin_pattern: "Domestic (CA, TX, IL, GA) overwhelmingly; some direct from Mexico City and Guadalajara"
+      dining_pattern: "Late-night heavy (22:00+), large communal groups, celebration-style service"
+    recent_form_summary: "Four wins and a draw across recent friendlies, including a 5-1 rout of Serbia, signaling sharp pre-tournament form for the home-nation co-host."
+
+  ARG:
+    name: Argentina
+    fifa_rank: 1
+    us_diaspora:
+      population_millions: 0.30
+      primary_concentrations: [Florida, New York, California, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: light blue and white
+      notable_traditions:
+        - "Post-2022 World Cup champions; fan passion at historic peak"
+        - "Asado and Malbec culture central to supporter gatherings"
+        - "Songs and chants borrowed from Italian ultras tradition"
+    hospitality_notes:
+      fnb_priorities:
+        - "Argentine asado (grilled meats) station"
+        - "Malbec and Torrontés wine program"
+        - "Empanada and dulce de leche dessert station"
+      language: ["Spanish-speaking concierge", "River Plate accent familiarity a plus"]
+      dietary: standard
+      rate_signal: "Very high suite demand as defending champions; premium pricing well-supported"
+    cuisine_signatures:
+      - { dish: "Asado platter (short ribs, chorizo, morcilla)", note: "Authentic Argentine signal; premium execution expected" }
+      - { dish: "Malbec flight from Mendoza producers", note: "High per-head beverage spend potential" }
+      - { dish: "Empanadas station (baked and fried)", note: "Accessible crowd pleaser, easy to scale" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida (Miami), New York, California; large direct influx from Buenos Aires"
+      dining_pattern: "Late dinners, multi-course family-style, wine-forward"
+    recent_form_summary: "Reigning World Cup champions on a three-match winning streak through recent friendlies, defeating Honduras, Zambia, and Mauritania with a combined 9–1 aggregate ahead of 2026."
+
+  BRA:
+    name: Brazil
+    fifa_rank: 5
+    us_diaspora:
+      population_millions: 0.40
+      primary_concentrations: [Florida, Massachusetts, New Jersey, New York, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: yellow and green
+      notable_traditions:
+        - "Samba and percussion supporter culture"
+        - "Colorful carnival-style match atmosphere"
+        - "Churrascaria culture for pre- and post-match gatherings"
+    hospitality_notes:
+      fnb_priorities:
+        - "Churrasco (Brazilian BBQ) carving station"
+        - "Caipirinha and cachaça cocktail program"
+        - "Pão de queijo and acai bowl breakfast options"
+      language: ["Portuguese-speaking concierge essential", "Brazilian Portuguese distinct from European"]
+      dietary: standard
+      rate_signal: "Very high demand; passionate fanbase drives premium suite uptake"
+    cuisine_signatures:
+      - { dish: "Churrasco rodízio carving station", note: "Quintessential Brazilian hospitality signal; high execution bar" }
+      - { dish: "Caipirinha cocktail program (classic and tropical variants)", note: "Brazil's national cocktail; premium bar anchor" }
+      - { dish: "Acai bowl and tropical fruit breakfast", note: "Health-forward option resonates with Brazilian palate" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida (Miami, Orlando), Massachusetts (Framingham), New Jersey heavy; direct from São Paulo and Rio"
+      dining_pattern: "Late dinners, festive communal style, dessert-heavy, caipirinha throughout"
+    recent_form_summary: "Four wins from last five, including commanding victories over Panama and Croatia, offset by losses to France and Bolivia in a confident pre-tournament run."
+
+  FRA:
+    name: France
+    fifa_rank: 2
+    us_diaspora:
+      population_millions: 0.20
+      primary_concentrations: [New York, California, Florida, Louisiana]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: blue, white, and red
+      notable_traditions:
+        - "Les Bleus organized supporter groups"
+        - "Wine and gastronomy central to French fan identity"
+        - "Strong football culture post-1998 and 2018 World Cup wins"
+    hospitality_notes:
+      fnb_priorities:
+        - "French wine program (Bordeaux, Burgundy, Champagne)"
+        - "Charcuterie and cheese board presentation"
+        - "French bistro-style elevated fare"
+      language: ["French-speaking concierge highly valued", "English typically sufficient for younger fans"]
+      dietary: standard
+      rate_signal: "High suite demand from sophisticated European traveler; premium wine spend elevates F&B revenue"
+    cuisine_signatures:
+      - { dish: "Charcuterie and artisan cheese board", note: "Premium presentation, high margin, French cultural anchor" }
+      - { dish: "French wine flight (Bordeaux red, Burgundy white, Champagne)", note: "Highest per-head beverage spend potential of any European market" }
+      - { dish: "Croque monsieur and croque madame brunch station", note: "Accessible French signal at scale" }
+    diaspora_travel_signal:
+      origin_pattern: "New York and California domestic; large direct influx from Paris and Lyon"
+      dining_pattern: "Multi-course, wine-paired, late evening; high expectations for quality"
+    recent_form_summary: "Three wins in last four friendlies, including victories over Brazil and Colombia, with one loss to Ivory Coast ahead of the 2026 World Cup."
+
+  ESP:
+    name: Spain
+    fifa_rank: 3
+    us_diaspora:
+      population_millions: 0.10
+      primary_concentrations: [Florida, California, New York, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: red and yellow
+      notable_traditions:
+        - "La Furia Roja passionate traveling support"
+        - "Tapas and late-night dining culture"
+        - "Rioja and Cava wine culture at supporter events"
+    hospitality_notes:
+      fnb_priorities:
+        - "Tapas station (patatas bravas, jamón ibérico, tortilla española)"
+        - "Rioja and Albariño wine program"
+        - "Jamón ibérico carving station as premium marker"
+      language: ["Spanish-speaking concierge (Castilian accent familiarity)", "English sufficient for most"]
+      dietary: standard
+      rate_signal: "High suite demand; Euro 2024 winners drive premium interest; jamón carving station justifies premium F&B pricing"
+    cuisine_signatures:
+      - { dish: "Jamón ibérico carving station", note: "Premium Spanish prestige marker; import logistics worth the effort" }
+      - { dish: "Tapas spread (patatas bravas, gambas al ajillo, croquetas)", note: "Shareable format suits suite environment" }
+      - { dish: "Rioja Reserva wine flight", note: "Strong beverage upsell; pairs naturally with charcuterie" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida and California domestic; direct from Madrid and Barcelona"
+      dining_pattern: "Late dining (21:00+ typical), tapas-style sharing, wine-forward"
+    recent_form_summary: "Reigning Euro 2024 champions enter 2026 World Cup on a mixed pre-tournament run: one cancelled Finalissima, wins over Serbia and Peru, draws against Iraq and Egypt."
+
+  ENG:
+    name: England
+    fifa_rank: 5
+    us_diaspora:
+      population_millions: 0.70
+      primary_concentrations: [California, New York, Florida, Texas, Georgia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: white and red
+      notable_traditions:
+        - "Three Lions traveling support; large organized fan groups"
+        - "Pub culture central to pre- and post-match rituals"
+        - "\"It's Coming Home\" anthem drives cultural momentum"
+    hospitality_notes:
+      fnb_priorities:
+        - "Elevated pub-style fare (fish and chips, pies)"
+        - "Premium ale and craft beer program"
+        - "English breakfast option for morning fixtures"
+      language: ["English"]
+      dietary: standard
+      rate_signal: "High suite demand; English supporters well-funded and spend freely on premium hospitality"
+    cuisine_signatures:
+      - { dish: "Elevated fish and chips with tartar sauce", note: "Inescapable English cultural signal; quality execution matters" }
+      - { dish: "Selection of English and local craft ales on tap", note: "Beer program is central; per-head beverage spend is high" }
+      - { dish: "English breakfast (full fry-up) for morning/midday fixtures", note: "Delights English supporters; strong cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "California, New York, Florida domestic; heavy direct from London, Manchester, Birmingham"
+      dining_pattern: "Pre-match pub-style heavy; post-match celebration drinks-forward"
+    recent_form_summary: "Three recent friendlies yield mixed results: a narrow win over New Zealand, a draw with Uruguay, and a loss to Japan ahead of World Cup 2026."
+
+  GER:
+    name: Germany
+    fifa_rank: 12
+    us_diaspora:
+      population_millions: 1.50
+      primary_concentrations: [Texas, California, Pennsylvania, Ohio, Wisconsin]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: black, red, and gold
+      notable_traditions:
+        - "Organized, disciplined supporter groups"
+        - "Beer hall and Oktoberfest culture at fan gatherings"
+        - "Strong family travel tradition"
+    hospitality_notes:
+      fnb_priorities:
+        - "German beer program (lager, hefeweizen, dunkel)"
+        - "Bratwurst and pretzel station"
+        - "Schnitzel and sauerkraut elevated fare"
+      language: ["German-speaking concierge appreciated but not essential", "English universally sufficient"]
+      dietary: standard
+      rate_signal: "High demand from large German-American diaspora; beer spend elevates F&B revenue significantly"
+    cuisine_signatures:
+      - { dish: "Bratwurst and pretzel station with mustard varieties", note: "Universally recognized German signal; easy execution" }
+      - { dish: "German beer flight (Pilsner, Hefeweizen, Dunkel)", note: "Premium beer program central to German fan experience" }
+      - { dish: "Schnitzel sandwich station (elevated game-day format)", note: "Accessible, hearty, crowd-pleasing" }
+    diaspora_travel_signal:
+      origin_pattern: "Texas, Pennsylvania, Ohio domestic; direct from Frankfurt and Munich"
+      dining_pattern: "Beer-forward, hearty portions, early dining typical (18:00-20:00)"
+    recent_form_summary: "Four consecutive pre-tournament wins, including a road victory over USA and a 4–0 rout of Finland, signal a Germany side arriving at the World Cup in sharp form."
+
+  NED:
+    name: Netherlands
+    fifa_rank: 7
+    us_diaspora:
+      population_millions: 0.18
+      primary_concentrations: [Michigan, New York, California, New Jersey]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: orange
+      notable_traditions:
+        - "Oranje traveling support in distinctive orange kit"
+        - "Strong Eredivisie football culture"
+        - "Dutch directness and efficiency in hospitality expectations"
+    hospitality_notes:
+      fnb_priorities:
+        - "Dutch beer program (Heineken, Amstel)"
+        - "Stroopwafel and Gouda cheese station"
+        - "Dutch Jenever gin cocktail option"
+      language: ["English universally sufficient", "Dutch hospitality staff a bonus"]
+      dietary: standard
+      rate_signal: "Moderate demand; Dutch fans well-traveled, spend appropriately on premium hospitality"
+    cuisine_signatures:
+      - { dish: "Gouda and Edam cheese board with accompaniments", note: "Recognizable Dutch cultural anchor" }
+      - { dish: "Stroopwafel station (fresh-made)", note: "High novelty factor; easy crowd pleaser" }
+      - { dish: "Dutch Jenever gin flight", note: "Premium beverage differentiator for sophisticated fans" }
+    diaspora_travel_signal:
+      origin_pattern: "Michigan and New York domestic; direct from Amsterdam"
+      dining_pattern: "Practical, efficient dining expectations; comfortable with standard service"
+    recent_form_summary: "Three wins and a draw in four pre-tournament friendlies, including a narrow loss to Algeria sandwiched between victories over Uzbekistan and Norway."
+
+  ITA:
+    name: Italy
+    fifa_rank: 9
+    us_diaspora:
+      population_millions: 4.50
+      primary_concentrations: [New York, New Jersey, Pennsylvania, California, Illinois]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: blue (Azzurri)
+      notable_traditions:
+        - "Azzurri passionate support with Ultras tradition"
+        - "Espresso and wine culture non-negotiable at fan events"
+        - "Italy missing 2018 creates hunger for 2026 statement"
+    hospitality_notes:
+      fnb_priorities:
+        - "Italian wine program (Barolo, Chianti, Prosecco)"
+        - "Antipasto and charcuterie spread"
+        - "Pasta station and authentic Italian coffee service"
+      language: ["Italian-speaking concierge appreciated", "English sufficient for most"]
+      dietary: standard
+      rate_signal: "Moderate-to-high demand; large Italian-American diaspora with high expectations for culinary quality"
+    cuisine_signatures:
+      - { dish: "Antipasto spread (prosciutto, burrata, olives, crostini)", note: "Premium Italian signal; quality ingredients essential" }
+      - { dish: "Pasta station (cacio e pepe, carbonara, amatriciana)", note: "High satisfaction, scales well for suite format" }
+      - { dish: "Barolo and Chianti wine flight", note: "Italian wine program drives significant beverage revenue" }
+    diaspora_travel_signal:
+      origin_pattern: "New York, New Jersey, Pennsylvania, Illinois domestic; direct from Rome and Milan"
+      dining_pattern: "Multi-course Italian tradition; wine expected throughout; late dining preferred"
+    recent_form_summary: "Narrow back-to-back friendly wins over Luxembourg and Greece heading into the tournament, showing defensive solidity but limited attacking output."
+
+  BEL:
+    name: Belgium
+    fifa_rank: 13
+    us_diaspora:
+      population_millions: 0.06
+      primary_concentrations: [California, New York, Illinois]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: black, yellow, and red
+      notable_traditions:
+        - "Red Devils known for passionate but organized support"
+        - "Belgian beer and chocolate culture central to fan identity"
+        - "Post-Golden Generation transition; new stars emerging"
+
+    hospitality_notes:
+      fnb_priorities:
+        - "Belgian craft beer program (Trappist, Abbey ales)"
+        - "Belgian chocolate and waffle station"
+        - "Moules-frites station for authentic flavor"
+      language: ["French and Dutch both spoken; English universally sufficient"]
+      dietary: standard
+      rate_signal: "Moderate demand; Belgian fans spend well on premium hospitality, especially beer"
+    cuisine_signatures:
+      - { dish: "Belgian waffle station with premium toppings", note: "Universal crowd pleaser; high novelty for non-Belgian guests" }
+      - { dish: "Belgian craft beer flight (Trappist selection)", note: "Among the world's finest beer programs; premium pricing justified" }
+      - { dish: "Moules-frites station", note: "Classic Belgian signal; fresh execution required" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light domestic; direct from Brussels and Antwerp"
+      dining_pattern: "Beer-forward, comfortable with multi-language service, moderate pace"
+    recent_form_summary: "Four unbeaten pre-tournament friendlies including a 5–0 rout of Tunisia and a 5–2 dismantling of USA, signaling a sharpened Belgium side entering 2026."
+
+  CRO:
+    name: Croatia
+    fifa_rank: 10
+    us_diaspora:
+      population_millions: 0.07
+      primary_concentrations: [California, Illinois, Pennsylvania, Ohio]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white checkerboard
+      notable_traditions:
+        - "Vatreni checkerboard jerseys iconic globally"
+        - "Strong football culture; Balkan passion at matches"
+        - "Coming off 2018 final and 2022 third-place finish"
+    hospitality_notes:
+      fnb_priorities:
+        - "Croatian wine program (Plavac Mali, Grk)"
+        - "Adriatic seafood and coastal fare"
+        - "Rakija spirits program for premium hospitality"
+      language: ["English sufficient for most", "Croatian/Serbian-speaking staff a bonus"]
+      dietary: standard
+      rate_signal: "Moderate demand; passionate small fanbase punches above its weight on spend"
+    cuisine_signatures:
+      - { dish: "Adriatic seafood platter (grilled branzino, shrimp)", note: "Croatian coastal cuisine signal; premium execution" }
+      - { dish: "Rakija (Croatian fruit brandy) flight", note: "Premium spirits differentiator; conversation starter" }
+      - { dish: "Peka (slow-cooked lamb or veal) station", note: "Authentic Croatian signature for VIP dining" }
+    diaspora_travel_signal:
+      origin_pattern: "California and Illinois domestic; direct from Zagreb and Split"
+      dining_pattern: "Communal, wine-and-spirits forward, moderate late dining"
+    recent_form_summary: "Mixed recent form across four friendlies — beating Slovenia and Colombia but falling to Belgium and Brazil — as the Modrić-era side enters what may be a final World Cup together."
+
+  JPN:
+    name: Japan
+    fifa_rank: 17
+    us_diaspora:
+      population_millions: 0.40
+      primary_concentrations: [California, Hawaii, New York, Washington, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: blue and white
+      notable_traditions:
+        - "Blue Samurai fans famous for cleaning stadiums after matches"
+        - "Organized, respectful supporter culture"
+        - "Group travel and corporate hospitality packages common"
+    hospitality_notes:
+      fnb_priorities:
+        - "Japanese cuisine station (sushi, ramen, edamame)"
+        - "Sake and Japanese whisky program"
+        - "High-quality presentation and precision service expected"
+      language: ["Japanese-speaking concierge strongly recommended", "Multilingual signage valued"]
+      dietary: other
+      rate_signal: "Very high suite demand; Japanese corporate travel groups drive premium hospitality spend significantly"
+    cuisine_signatures:
+      - { dish: "Premium sushi and sashimi station", note: "Quality standard non-negotiable; Japanese fans are discerning" }
+      - { dish: "Sake and Japanese whisky (Suntory, Nikka) flight", note: "Premium beverage program; highest-end price point justified" }
+      - { dish: "Ramen station with premium toppings (tonkotsu, shoyu)", note: "Crowd pleaser; execution and authenticity matter" }
+    diaspora_travel_signal:
+      origin_pattern: "California and Hawaii domestic; very large direct influx from Tokyo, Osaka, Nagoya"
+      dining_pattern: "Precision dining expectations; quiet efficiency preferred; group corporate format common"
+    recent_form_summary: "Four wins from last five, including back-to-back victories over Scotland and England; narrow losses rare for a side that dismantled Indonesia 6-0 in Asian qualification."
+
+  KOR:
+    name: South Korea
+    fifa_rank: 22
+    us_diaspora:
+      population_millions: 1.90
+      primary_concentrations: [California, New York, New Jersey, Virginia, Georgia]
+      georgia_concentration: moderate
+    fan_culture:
+      travel_propensity: very_high
+      color_signal: red and white
+      notable_traditions:
+        - "Red Devils organized cheer culture; drumline and chants"
+        - "Korean BBQ culture central to supporter gatherings"
+        - "Large corporate and K-culture travel crossover"
+    hospitality_notes:
+      fnb_priorities:
+        - "Korean BBQ station (galbi, bulgogi, samgyeopsal)"
+        - "Soju and Korean craft beer program"
+        - "Banchan (side dish) spread for authentic experience"
+      language: ["Korean-speaking concierge essential", "Multilingual staff strongly recommended"]
+      dietary: standard
+      rate_signal: "Very high suite demand; large and affluent Korean-American diaspora; Korean corporate travel groups significant"
+    cuisine_signatures:
+      - { dish: "Korean BBQ station (galbi short ribs, bulgogi, samgyeopsal)", note: "Highest-impact Korean cultural signal; requires tableside grill setup" }
+      - { dish: "Soju and Korean craft beer program (Hite, Cass, OB)", note: "Soju cocktails trend; premium positioning possible" }
+      - { dish: "Kimchi station and banchan spread", note: "Authentic Korean meal signal; low cost, high cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "California (LA Koreatown), New York, Virginia, Georgia domestic; large direct influx from Seoul"
+      dining_pattern: "Group dining, Korean BBQ format (communal grill), soju-forward, late and festive"
+    recent_form_summary: "Qualified for home-continent World Cup with mixed recent form, including a heavy loss to Ivory Coast and a win over Austria offset by comfortable victories against weaker opposition."
+
+  AUS:
+    name: Australia
+    fifa_rank: 25
+    us_diaspora:
+      population_millions: 0.09
+      primary_concentrations: [California, New York, Florida, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: gold and green
+      notable_traditions:
+        - "Socceroos traveling fans known for relaxed, friendly atmosphere"
+        - "Barbecue (barbie) culture central to fan gatherings"
+        - "Far-traveling support despite long distances"
+    hospitality_notes:
+      fnb_priorities:
+        - "Elevated barbie-style grilled fare"
+        - "Australian wine program (Shiraz, Riesling)"
+        - "Meat pie elevated as premium snack"
+      language: ["English"]
+      dietary: standard
+      rate_signal: "Moderate demand; Australian fans spend well but limited diaspora volume"
+    cuisine_signatures:
+      - { dish: "Elevated Australian meat pie with mushy peas", note: "Iconic Australian sporting-event food; novelty factor for non-Australian guests" }
+      - { dish: "Australian Shiraz and Riesling wine flight", note: "Premium wine program; Barossa Valley Shiraz particularly strong" }
+      - { dish: "Barbie-style mixed grill platter", note: "Australian cultural signal; easy execution for catering teams" }
+    diaspora_travel_signal:
+      origin_pattern: "California and New York domestic; direct from Sydney and Melbourne"
+      dining_pattern: "Relaxed, informal, early dining preferred, social atmosphere"
+    recent_form_summary: "Two wins over Curaçao and Cameroon bookend a narrow loss to Mexico and draw with Switzerland, with a key World Cup qualifying win in Saudi Arabia anchoring the recent run."
+
+  SEN:
+    name: Senegal
+    fifa_rank: 20
+    us_diaspora:
+      population_millions: 0.06
+      primary_concentrations: [New York, Georgia, Maryland, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: green, yellow, and red
+      notable_traditions:
+        - "Teranga (Senegalese hospitality) values reflected in fan culture"
+        - "AFCON champions with growing global following"
+        - "Sadio Mané fanbase drives international travel"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified proteins across all dining options"
+        - "West African menu items (thieboudienne, yassa)"
+        - "Bissap (hibiscus) and ginger juice non-alcoholic program"
+      language: ["French-speaking concierge essential", "Wolof-speaking staff a strong plus"]
+      dietary: halal
+      rate_signal: "Moderate demand; limited but loyal diaspora; halal execution quality matters for repeat business"
+    cuisine_signatures:
+      - { dish: "Thieboudienne (Senegalese fish and rice)", note: "National dish; powerful cultural resonance for diaspora fans" }
+      - { dish: "Yassa poulet (grilled chicken with caramelized onion and lemon)", note: "Accessible West African signature; easy to execute at scale" }
+      - { dish: "Bissap and ginger juice station", note: "Non-alcoholic premium option; aligns with halal requirements" }
+    diaspora_travel_signal:
+      origin_pattern: "New York and Atlanta metro domestic; direct from Dakar"
+      dining_pattern: "Family-style communal, late afternoon and evening preferred, non-alcoholic options essential"
+    recent_form_summary: "Two home friendly wins over Peru and Gambia precede a narrow 3-2 defeat to the USA, reflecting a competitive but inconsistent recent stretch."
+
+  CMR:
+    name: Cameroon
+    fifa_rank: 42
+    us_diaspora:
+      population_millions: 0.05
+      primary_concentrations: [Texas, Georgia, Maryland, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: green, red, and yellow
+      notable_traditions:
+        - "Indomitable Lions supporter culture; drum-heavy atmosphere"
+        - "African football pride central to fan identity"
+        - "French-West African cultural crossover"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-friendly protein options recommended"
+        - "Central/West African menu items (ndolé, suya)"
+        - "Cameroon beer (Castel/33 Export) as cultural marker if available"
+      language: ["French-speaking concierge essential", "English useful for anglophone Cameroonian diaspora"]
+      dietary: halal
+      rate_signal: "Low-to-moderate demand; limited diaspora; standard pricing with halal quality premium"
+    cuisine_signatures:
+      - { dish: "Ndolé (bitter leaf stew with groundnuts)", note: "National dish of Cameroon; strong cultural signal for diaspora" }
+      - { dish: "Suya skewers (West African spiced grilled meat)", note: "Halal street-food format; crowd pleaser for African fan bloc" }
+    diaspora_travel_signal:
+      origin_pattern: "Texas, Georgia, Maryland domestic; direct from Douala and Yaoundé"
+      dining_pattern: "Communal family-style, halal expectations, late evening preference"
+    recent_form_summary: "Two-match March 2026 FIFA Series split: fell to Australia before rebounding with a clean-sheet win over China."
+
+  EGY:
+    name: Egypt
+    fifa_rank: 32
+    us_diaspora:
+      population_millions: 0.15
+      primary_concentrations: [New York, California, New Jersey, Texas, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Pharaohs passionate supporter base; Mo Salah-era global following"
+        - "Strong community solidarity among diaspora fans"
+        - "Football deeply embedded in national identity"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu across all protein options"
+        - "Egyptian and Middle Eastern fare (koshari, ful medames)"
+        - "Egyptian tea and mint tea service"
+      language: ["Arabic-speaking concierge essential", "French useful for some segments"]
+      dietary: halal
+      rate_signal: "Moderate demand; Mo Salah fanbase adds premium experiential interest; halal execution quality critical"
+    cuisine_signatures:
+      - { dish: "Koshari station (lentils, rice, pasta, tomato sauce)", note: "Egypt's beloved street food; inexpensive, high cultural resonance" }
+      - { dish: "Ful medames and falafel breakfast spread", note: "Authentic Egyptian morning signal" }
+      - { dish: "Mint tea and Egyptian coffee service", note: "Hospitality marker; expected at any Egyptian-focused event" }
+    diaspora_travel_signal:
+      origin_pattern: "New York, New Jersey, California domestic; direct from Cairo"
+      dining_pattern: "Late dining, family gatherings, sweet-heavy post-meal, tea throughout"
+    recent_form_summary: "Strong recent form across four friendlies: thrashed Saudi Arabia 4-0, held Spain to a draw, edged Russia, before falling narrowly to Brazil 2-1."
+
+  NGA:
+    name: Nigeria
+    fifa_rank: 28
+    us_diaspora:
+      population_millions: 0.37
+      primary_concentrations: [Texas, Maryland, Georgia, New York, California]
+      georgia_concentration: moderate
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: green and white
+      notable_traditions:
+        - "Super Eagles vocal and colorful supporter culture"
+        - "Nigeria's Super Eagles jersey among Africa's most-followed globally"
+        - "Afrobeats music culture crossover into fan events"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-friendly protein options (mix with standard depending on player origin)"
+        - "Nigerian and West African cuisine (jollof rice, suya, puff-puff)"
+        - "Non-alcoholic palm juice and soft drink options"
+      language: ["English official; Nigerian English concierge", "Yoruba/Igbo/Hausa-speaking staff a strong plus"]
+      dietary: standard
+      rate_signal: "Moderate demand; Nigerian-American community large and engaged; Afrobeats cultural crossover lifts event premium"
+    cuisine_signatures:
+      - { dish: "Jollof rice station (Nigerian style)", note: "Iconic West African dish; Nigerian vs. Ghanaian jollof is a beloved cultural debate — play into it" }
+      - { dish: "Suya skewers with spice rub and onion salad", note: "Street food format; easy execution, strong flavor profile" }
+      - { dish: "Puff-puff and chin chin snack station", note: "Nigerian sweet snacks; low cost, high nostalgia for diaspora" }
+    diaspora_travel_signal:
+      origin_pattern: "Texas (Houston, Dallas), Maryland, Georgia, New York domestic; direct from Lagos and Abuja"
+      dining_pattern: "Festive, communal, music-forward atmosphere; jollof rice a communal anchor; evening-heavy"
+    recent_form_summary: "Four-game pre-tournament friendly run yields two wins and two draws, including a 3-0 victory over Jamaica and a 2-2 stalemate with Poland."
+
+  COL:
+    name: Colombia
+    fifa_rank: 8
+    us_diaspora:
+      population_millions: 1.20
+      primary_concentrations: [Florida, New York, New Jersey, Texas, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: yellow, blue, and red
+      notable_traditions:
+        - "Los Cafeteros passionate and musical supporter culture"
+        - "Coffee and aguardiente central to Colombian social gatherings"
+        - "Strong CONMEBOL rivalry culture drives fan intensity"
+    hospitality_notes:
+      fnb_priorities:
+        - "Colombian coffee program (premium Colombian pour-over)"
+        - "Aguardiente and rum cocktail program"
+        - "Arepas station and Colombian street food"
+      language: ["Spanish-speaking concierge essential", "Colombian Spanish accent familiarity a plus"]
+      dietary: standard
+      rate_signal: "High demand; large Florida and Northeast diaspora; Copa América 2024 finalists drive premium interest"
+    cuisine_signatures:
+      - { dish: "Arepa station with hogao sauce and cheese", note: "Colombian staple; accessible crowd pleaser at scale" }
+      - { dish: "Bandeja paisa station (beans, rice, chicharrón, avocado)", note: "Full Colombian signature meal; premium suite format" }
+      - { dish: "Colombian coffee pour-over bar", note: "Premium beverage differentiator; Colombia's global identity asset" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida (Miami), New York, New Jersey domestic; direct from Bogotá and Medellín"
+      dining_pattern: "Late dinners, festive communal style, coffee throughout the day, aguardiente-forward evenings"
+    recent_form_summary: "Five-match stretch shows contrasting form: back-to-back friendly wins over Jordan and Costa Rica bookend earlier losses to France and Croatia, with a standout 6-3 qualifying rout of Venezuela."
+
+  URU:
+    name: Uruguay
+    fifa_rank: 19
+    us_diaspora:
+      population_millions: 0.06
+      primary_concentrations: [Florida, New York, New Jersey, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: sky blue and white (La Celeste)
+      notable_traditions:
+        - "La Celeste small but fierce traveling support"
+        - "Asado and Tannat wine culture at fan events"
+        - "Footballing nation identity tied to 1930 and 1950 World Cup wins"
+    hospitality_notes:
+      fnb_priorities:
+        - "Uruguay Tannat wine program (distinctive regional identity)"
+        - "Chivito (Uruguayan steak sandwich) station"
+        - "Asado platter (parrilla style)"
+      language: ["Spanish-speaking concierge", "River Plate accent similar to Argentine"]
+      dietary: standard
+      rate_signal: "Moderate demand; small but passionate diaspora; Tannat wine program differentiates F&B experience"
+    cuisine_signatures:
+      - { dish: "Chivito (steak, ham, egg, cheese sandwich) station", note: "Uruguay's national sandwich; unique regional identity marker" }
+      - { dish: "Tannat wine flight (Bodega Garzon, Pisano)", note: "Uruguay's distinctive wine variety; conversation-starter for sommeliers" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida and New York domestic; direct from Montevideo"
+      dining_pattern: "Asado-style communal, late evening, wine-forward"
+    recent_form_summary: "Three draws and two wins across last five outings, including a 3-0 qualifying victory over Peru and a creditable 1-1 draw with England in March 2026."
+
+  ECU:
+    name: Ecuador
+    fifa_rank: 30
+    us_diaspora:
+      population_millions: 0.65
+      primary_concentrations: [New York, New Jersey, Florida, Illinois, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: yellow, blue, and red
+      notable_traditions:
+        - "La Tri loyal traveling support; New York diaspora particularly active"
+        - "Andean music and culture at fan gatherings"
+        - "Opened 2022 World Cup; dramatic fan moments"
+    hospitality_notes:
+      fnb_priorities:
+        - "Ecuadorian and Andean cuisine (ceviche, llapingachos, seco)"
+        - "Beer and spirits program (Pilsener Ecuador)"
+        - "Canelazo (hot cinnamon-spiced spirit drink) for premium option"
+      language: ["Spanish-speaking concierge essential"]
+      dietary: standard
+      rate_signal: "Moderate demand; large New York diaspora drives travel; standard suite pricing"
+    cuisine_signatures:
+      - { dish: "Ecuadorian ceviche (shrimp, lime, tomato, onion)", note: "Distinct from Peruvian style; cold citrus-forward; strong cultural signal" }
+      - { dish: "Llapingachos (potato and cheese cakes) station", note: "Andean comfort food; accessible and affordable execution" }
+    diaspora_travel_signal:
+      origin_pattern: "New York, New Jersey domestic heavy; direct from Quito and Guayaquil"
+      dining_pattern: "Family communal style, early-to-mid evening dining, ceviche as social anchor"
+    recent_form_summary: "Opened Qatar 2022 with win over host; consistent CONMEBOL qualifier; youthful squad with upside."
+
+  PER:
+    name: Peru
+    fifa_rank: 35
+    us_diaspora:
+      population_millions: 0.55
+      primary_concentrations: [Florida, New Jersey, New York, California, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Blanquirroja passionate, emotional fanbase"
+        - "Peruvian gastronomy globally recognized; fans proud of food identity"
+        - "Cumbia and salsa music at fan events"
+    hospitality_notes:
+      fnb_priorities:
+        - "Peruvian cuisine station (ceviche, lomo saltado, causa)"
+        - "Pisco sour cocktail program"
+        - "Chicha morada non-alcoholic option"
+      language: ["Spanish-speaking concierge", "Quechua context useful but not critical"]
+      dietary: standard
+      rate_signal: "Moderate demand; Peruvian gastronomy positioning justifies premium F&B pricing; pisco program strong upsell"
+    cuisine_signatures:
+      - { dish: "Classic Peruvian ceviche station (leche de tigre style)", note: "Peru's global gastronomic calling card; execute at high quality" }
+      - { dish: "Pisco sour cocktail program (classic and passion fruit)", note: "Peru's national cocktail; premium bar anchor" }
+      - { dish: "Lomo saltado station (stir-fried beef, tomato, fried potato)", note: "Beloved Peruvian fusion dish; crowd pleaser at scale" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida and New Jersey domestic; direct from Lima"
+      dining_pattern: "Late dining, multi-course appreciation for gastronomy, pisco throughout, communal"
+    recent_form_summary: "Mixed recent form across five friendlies and a World Cup qualifier, with a narrow win over Haiti offset by losses to Spain and Senegal and a late qualifying defeat to Paraguay."
+
+  CRC:
+    name: Costa Rica
+    fifa_rank: 48
+    us_diaspora:
+      population_millions: 0.14
+      primary_concentrations: [Florida, California, New York, New Jersey]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red, white, and blue
+      notable_traditions:
+        - "La Sele surprise specialists; 2014 quarterfinal legacy"
+        - "Pura Vida culture; relaxed, friendly supporter atmosphere"
+        - "Underdog identity resonates with neutral fans"
+    hospitality_notes:
+      fnb_priorities:
+        - "Costa Rican coffee program (premium single-origin)"
+        - "Casado and gallo pinto station"
+        - "Guaro (local spirit) cocktail program as cultural marker"
+      language: ["Spanish-speaking concierge"]
+      dietary: standard
+      rate_signal: "Moderate demand; Florida diaspora active; standard pricing with coffee program as premium differentiator"
+    cuisine_signatures:
+      - { dish: "Costa Rican coffee pour-over and cold brew bar", note: "Among the world's best coffee origins; premium differentiator" }
+      - { dish: "Gallo pinto and eggs breakfast station", note: "Costa Rican national breakfast; strong cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida domestic; direct from San José"
+      dining_pattern: "Relaxed Pura Vida style, coffee-centric, family gatherings, informal atmosphere"
+    recent_form_summary: "Difficult recent stretch with four losses or draws in the last five outings, including a 5-0 defeat to Iran and losses to Colombia and Haiti."
+
+  NOR:
+    name: Norway
+    fifa_rank: 33
+    us_diaspora:
+      population_millions: 0.45
+      primary_concentrations: [Minnesota, Wisconsin, Washington, North Dakota, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and blue
+      notable_traditions:
+        - "Erling Haaland-driven surge in global Norwegian football interest"
+        - "Scandinavian organized, calm supporter culture"
+        - "Long-suffering fanbase; first World Cup since 1998 a major moment"
+    hospitality_notes:
+      fnb_priorities:
+        - "Scandinavian fare (smoked salmon, gravlaks, rye bread)"
+        - "Norwegian aquavit spirits program"
+        - "Nordic beer program (Ringnes, Mack)"
+      language: ["English universally sufficient", "Scandinavian staff appreciated but not essential"]
+      dietary: standard
+      rate_signal: "Moderate demand; Norwegian-American Midwest diaspora not heavily concentrated near World Cup venues; Haaland fans supplement"
+    cuisine_signatures:
+      - { dish: "Smoked salmon and gravlaks station with crème fraîche and rye crackers", note: "Norwegian premium signal; easy cold-station execution" }
+      - { dish: "Aquavit flight (Linie, Lysholm)", note: "Nordic spirits differentiator; conversation starter in premium suites" }
+    diaspora_travel_signal:
+      origin_pattern: "Minnesota and Wisconsin domestic; direct from Oslo"
+      dining_pattern: "Early dining typical, modest expectations, quality-focused rather than quantity"
+    recent_form_summary: "One win, two draws, one loss across four recent friendlies, including a sharp 3–1 defeat of Sweden and narrow loss to the Netherlands."
+
+  SWE:
+    name: Sweden
+    fifa_rank: 26
+    us_diaspora:
+      population_millions: 0.50
+      primary_concentrations: [Minnesota, Illinois, Washington, California, New York]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: yellow and blue
+      notable_traditions:
+        - "Organized Allsvenskan supporter culture translates to national team"
+        - "Scandinavian efficiency in hospitality expectations"
+        - "Post-Zlatan Ibrahimovic transition era"
+    hospitality_notes:
+      fnb_priorities:
+        - "Swedish smorgasbord station (herring, meatballs, crispbread)"
+        - "Swedish aquavit and schnapps program"
+        - "IKEA-adjacent comfort food elevated (Swedish meatballs with lingonberry)"
+      language: ["English universally sufficient"]
+      dietary: standard
+      rate_signal: "Moderate demand; Scandinavian-American Midwest diaspora; standard pricing with smorgasbord as premium differentiator"
+    cuisine_signatures:
+      - { dish: "Swedish smorgasbord station (pickled herring, meatballs, Jansson's temptation, crispbread)", note: "Authentic Swedish spread; high novelty factor for non-Swedish guests" }
+      - { dish: "Swedish meatballs with lingonberry and cream sauce station", note: "Most globally recognized Swedish dish; crowd pleaser that scales" }
+    diaspora_travel_signal:
+      origin_pattern: "Minnesota and Illinois domestic; direct from Stockholm"
+      dining_pattern: "Practical, quality-focused, moderate pace, schnapps songs at festive moments"
+    recent_form_summary: "Two June friendlies yielded mixed results: a 3-1 loss to Norway followed by a 2-2 draw with Greece."
+
+  DEN:
+    name: Denmark
+    fifa_rank: 21
+    us_diaspora:
+      population_millions: 0.40
+      primary_concentrations: [California, Wisconsin, Minnesota, Illinois, Iowa]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Roligans (Danish supporters) known as world's friendliest fans"
+        - "Hygge culture extends to fan hospitality"
+        - "Euro 2020 semifinalists drove fan surge"
+    hospitality_notes:
+      fnb_priorities:
+        - "Danish open-faced sandwich (smørrebrød) station"
+        - "Danish craft beer program (Carlsberg, Mikkeller)"
+        - "Danish pastry station (wienerbrød)"
+      language: ["English universally sufficient"]
+      dietary: standard
+      rate_signal: "Moderate demand; Danish-American Midwest diaspora; Carlsberg/Mikkeller beer program drives beverage spend"
+    cuisine_signatures:
+      - { dish: "Smørrebrød station (open-faced rye sandwiches with herring, smoked salmon, roast beef)", note: "Danish cultural anchor; premium cold buffet format" }
+      - { dish: "Mikkeller craft beer flight", note: "Denmark's world-class craft beer export; premium beverage positioning" }
+      - { dish: "Danish pastry (wienerbrød) and coffee station", note: "Universal crowd pleaser; morning and afternoon fixture draw" }
+    diaspora_travel_signal:
+      origin_pattern: "California and Midwest domestic; direct from Copenhagen"
+      dining_pattern: "Hygge (cozy communal) style; beer-forward, open-faced sandwiches as social food, relaxed pace"
+    recent_form_summary: "Two pre-tournament friendlies yielding a win over Ukraine and a goalless draw against Congo DR, suggesting a cautious but unbeaten final build-up."
+
+  # ── 20 additional teams for full 2026 World Cup coverage ─────────────────────
+
+  CAN:
+    name: Canada
+    fifa_rank: 38
+    us_diaspora:
+      population_millions: 0.80
+      primary_concentrations: [New York, Michigan, Florida, Washington, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: red and white
+      notable_traditions:
+        - "First World Cup as co-host; historic 2022 qualification ended 36-year absence"
+        - "CanMNT supporter groups (Voyageurs) very organized and vocal"
+        - "Hockey culture crossover; fans comfortable in arena/stadium hospitality settings"
+    hospitality_notes:
+      fnb_priorities:
+        - "Canadian whisky program (Crown Royal, Forty Creek)"
+        - "Poutine station (elevated with premium toppings)"
+        - "Maple-themed dessert station"
+      language: ["English", "French-speaking concierge for Québécois supporters"]
+      dietary: standard
+      rate_signal: "High demand as co-host nation; patriotic premium pricing well-supported; border proximity drives strong domestic US travel"
+    cuisine_signatures:
+      - { dish: "Poutine station (fries, cheese curds, gravy) with premium toppings", note: "Canada's most iconic dish; novelty factor for non-Canadian guests" }
+      - { dish: "Butter tart and maple dessert station", note: "Distinctly Canadian; excellent afternoon-fixture sweet option" }
+      - { dish: "Canadian whisky flight (Crown Royal, Forty Creek, Canadian Club)", note: "Differentiates from US bourbon program; premium beverage anchor" }
+    diaspora_travel_signal:
+      origin_pattern: "New York, Michigan, Washington domestic border-crossers; direct from Toronto, Vancouver, Montreal"
+      dining_pattern: "Familiar with North American hospitality; comfortable with both casual and premium formats; maple and poutine generate strong emotional response"
+    recent_form_summary: "First World Cup as co-host and qualified 2022; Alphonso Davies-led generation at peak; CONCACAF title contender for 2026."
+
+  SUI:
+    name: Switzerland
+    fifa_rank: 16
+    us_diaspora:
+      population_millions: 0.04
+      primary_concentrations: [New York, California, Illinois]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Organized Swiss supporter culture; multilingual fanbase (German, French, Italian)"
+        - "Consistent deep tournament runs fuel confident travel tradition"
+        - "Swiss precision expectations extend to hospitality service"
+    hospitality_notes:
+      fnb_priorities:
+        - "Swiss cheese fondue and raclette station"
+        - "Swiss wine program (Chasselas, Pinot Noir from Valais)"
+        - "Swiss chocolate and confectionery dessert station"
+      language: ["English universally sufficient", "German/French/Italian staff a plus for regional Swiss fans"]
+      dietary: standard
+      rate_signal: "Moderate demand; small diaspora but high-spending European traveler; Swiss precision = high F&B quality bar"
+    cuisine_signatures:
+      - { dish: "Raclette station (melted cheese over potatoes, cornichons, pearl onions)", note: "Iconic Swiss alpine experience; high novelty and engagement factor" }
+      - { dish: "Swiss chocolate fondue dessert station", note: "Universally appealing; premium Swiss chocolate brands justified" }
+      - { dish: "Swiss wine flight (Chasselas white, Valais Pinot Noir)", note: "Under-known globally; conversation-starter for sommeliers" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light domestic; direct from Zurich and Geneva"
+      dining_pattern: "Precision expectations; quality over quantity; multi-language comfort; cheese-forward social dining"
+    recent_form_summary: "Four recent friendlies yield one win, two draws, and a 3-4 defeat to Germany, reflecting a competitive but inconsistent pre-tournament tune-up run."
+
+  QAT:
+    name: Qatar
+    fifa_rank: 52
+    us_diaspora:
+      population_millions: 0.02
+      primary_concentrations: [New York, Texas, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: maroon and white
+      notable_traditions:
+        - "2022 World Cup host nation experience shifted fan expectations"
+        - "Strong government-backed travel infrastructure for official delegations"
+        - "Hospitality-focused fan culture; suite and VIP formats preferred"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu across all protein options — non-negotiable"
+        - "Arabic coffee (gahwa) and dates service"
+        - "Middle Eastern mezze spread (hummus, tabbouleh, fattoush)"
+      language: ["Arabic-speaking concierge essential", "English widely spoken by Qatari travelers"]
+      dietary: halal
+      rate_signal: "Very low diaspora volume; any Qatari delegation will be VIP government or corporate — top-tier suite pricing fully supported"
+    cuisine_signatures:
+      - { dish: "Arabic coffee (gahwa) and premium Medjool dates service", note: "Cultural hospitality cornerstone; sets an immediate tone of respect" }
+      - { dish: "Machboos (spiced rice with lamb or chicken)", note: "Qatar's national dish; authentic Middle Eastern signal" }
+      - { dish: "Mezze spread (hummus, mutabbal, fattoush, pita)", note: "Shareable halal format; accessible crowd pleaser" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light; primarily official delegation and government travel direct from Doha"
+      dining_pattern: "VIP format expected; late dining; halal strictly observed; dates and coffee as ambient hospitality signal"
+    recent_form_summary: "Host nation entering tournament on modest pre-competition form, managing just one goal in two completed recent friendlies—a 0-0 draw with El Salvador and a 1-0 loss to Ireland."
+
+  BIH:
+    name: Bosnia and Herzegovina
+    fifa_rank: 68
+    us_diaspora:
+      population_millions: 0.40
+      primary_concentrations: [Missouri, Illinois, Florida, New York, Washington]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: blue and yellow
+      notable_traditions:
+        - "St. Louis MO Bosnian community one of the largest outside Bosnia; passionate local fan base"
+        - "Diaspora-driven travel; emotional connection to national team very strong"
+        - "Coffee culture (Bosnian coffee) central to social gatherings"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-friendly protein options strongly preferred by majority Muslim fan base"
+        - "Bosnian coffee service (džezva preparation)"
+        - "Ćevapi and Bosnian grill station"
+      language: ["Bosnian/Serbian/Croatian mutually intelligible; English sufficient for younger fans"]
+      dietary: halal
+      rate_signal: "Moderate demand driven by concentrated St. Louis and Chicago diaspora; halal execution quality key differentiator"
+    cuisine_signatures:
+      - { dish: "Ćevapi with somun bread and kajmak", note: "Bosnia's national dish; instantly recognizable to diaspora fans" }
+      - { dish: "Bosnian coffee (džezva) service with sugar cube and rahat lokum", note: "Cultural hospitality ritual; low cost, very high cultural resonance" }
+      - { dish: "Burek (meat-filled phyllo pastry) station", note: "Beloved Balkan staple; accessible and crowd-pleasing at scale" }
+    diaspora_travel_signal:
+      origin_pattern: "St. Louis MO primary; Chicago, Florida secondary; direct from Sarajevo"
+      dining_pattern: "Communal family-style; halal expectations; coffee throughout; late evening preference"
+    recent_form_summary: "Qualifying for first World Cup since 2014; Dragons squad on upswing; Edin Džeko post-era transition with new generation."
+
+  CIV:
+    name: Côte d'Ivoire
+    fifa_rank: 39
+    us_diaspora:
+      population_millions: 0.05
+      primary_concentrations: [New York, Georgia, Maryland, Minnesota]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: orange, white, and green
+      notable_traditions:
+        - "Éléphants passionate support; AFCON 2023 host and champion"
+        - "Vibrant Ivorian music and dance culture at fan events"
+        - "French West African cultural crossover; large diaspora in France"
+    hospitality_notes:
+      fnb_priorities:
+        - "West African and Ivorian cuisine (attiéké, grilled fish, kedjenou)"
+        - "Halal-friendly protein options recommended"
+        - "Palm wine or ginger juice non-alcoholic program"
+      language: ["French-speaking concierge essential", "English useful for anglophone guests"]
+      dietary: standard
+      rate_signal: "Moderate demand; small US diaspora but passionate; AFCON 2023 champions elevate interest significantly"
+    cuisine_signatures:
+      - { dish: "Attiéké (fermented cassava couscous) with grilled tilapia", note: "Côte d'Ivoire's most iconic dish; strong cultural signal for diaspora" }
+      - { dish: "Kedjenou (slow-braised chicken with vegetables)", note: "Traditional Ivorian specialty; premium suite presentation opportunity" }
+      - { dish: "Alloco (fried plantain) station with chili sauce", note: "Street food format; crowd pleaser, easy to execute at scale" }
+    diaspora_travel_signal:
+      origin_pattern: "Light domestic; direct from Abidjan and Paris (French Ivorian diaspora)"
+      dining_pattern: "Communal family-style; late evening; French culinary influences blend with West African traditions"
+    recent_form_summary: "AFCON 2023 champions as hosts; consistently strong African continent performance; Sébastien Haller-led generation peaking."
+
+  NZL:
+    name: New Zealand
+    fifa_rank: 97
+    us_diaspora:
+      population_millions: 0.05
+      primary_concentrations: [California, Washington, Hawaii, New York]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: white and black (All Whites)
+      notable_traditions:
+        - "All Whites fans cheerful and relaxed; rugby culture more dominant nationally"
+        - "Haka cultural heritage resonates globally even for football"
+        - "Long-distance travel from Oceania limits volume; fans who come are committed"
+    hospitality_notes:
+      fnb_priorities:
+        - "New Zealand lamb and beef program"
+        - "New Zealand Sauvignon Blanc and Pinot Noir wine program"
+        - "Pavlova dessert as cultural marker"
+      language: ["English"]
+      dietary: standard
+      rate_signal: "Low demand; tiny US diaspora; long-haul travel limits volume; standard suite pricing"
+    cuisine_signatures:
+      - { dish: "Roast New Zealand lamb station", note: "NZ's most recognized premium protein; lamb rack as suite centerpiece" }
+      - { dish: "New Zealand Sauvignon Blanc and Central Otago Pinot Noir flight", note: "World-class NZ wine program; Marlborough SB widely recognized" }
+      - { dish: "Pavlova with kiwifruit and cream", note: "NZ/Australia cultural debate dessert; novelty factor for guests" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light domestic; direct from Auckland and Wellington — very long haul"
+      dining_pattern: "Relaxed, informal; wine-forward; British-influenced dining expectations; early-to-moderate timing"
+    recent_form_summary: "OFC qualifier; 2022 World Cup group stage; improved via Football Ferns parallel success lifting national football profile."
+
+  KSA:
+    name: Saudi Arabia
+    fifa_rank: 56
+    us_diaspora:
+      population_millions: 0.07
+      primary_concentrations: [New York, California, Texas, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: green and white
+      notable_traditions:
+        - "Saudi Pro League investment has raised national team profile"
+        - "2034 World Cup host nation — government prestige investment in football"
+        - "Dramatic 2022 win over Argentina the defining modern fan moment"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu non-negotiable across all dining options"
+        - "Arabic coffee and dates ambient hospitality"
+        - "Kabsa and Middle Eastern rice dishes as signature"
+      language: ["Arabic-speaking concierge essential", "English sufficient for official delegation"]
+      dietary: halal
+      rate_signal: "Very low diaspora but any Saudi delegation will be corporate/government VIP — top-tier suite pricing, highest halal standards required"
+    cuisine_signatures:
+      - { dish: "Kabsa (spiced rice with lamb or chicken)", note: "Saudi Arabia's national dish; warm, aromatic, crowd-pleasing" }
+      - { dish: "Arabic coffee (gahwa) and Medjool dates service", note: "Non-negotiable cultural hospitality gesture; inexpensive, very high signal" }
+      - { dish: "Jareesh (cracked wheat porridge with spiced meat)", note: "Traditional Saudi comfort food; differentiates from generic Middle Eastern menu" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light; primarily official delegation travel direct from Riyadh and Jeddah"
+      dining_pattern: "Halal strictly observed; VIP suite format expected; dates and gahwa as ambient service; late dining"
+    recent_form_summary: "Mixed recent form across five matches—one win over Puerto Rico, losses to Egypt (0-4), Serbia, and Ecuador, with a goalless draw against Iraq in Asian World Cup qualifying."
+
+  CPV:
+    name: Cape Verde
+    fifa_rank: 71
+    us_diaspora:
+      population_millions: 0.10
+      primary_concentrations: [Massachusetts, Rhode Island, California, New Jersey]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: blue and red
+      notable_traditions:
+        - "New England (Brockton, New Bedford, Boston) has one of the largest Cape Verdean communities globally"
+        - "AFCON surprise packages with passionate traveling support"
+        - "Morna music culture (Cesária Évora heritage) central to social events"
+    hospitality_notes:
+      fnb_priorities:
+        - "Cape Verdean cuisine (cachupa, catchupa) and seafood program"
+        - "Grogue (Cape Verdean sugarcane spirit) cocktail program"
+        - "Portuguese culinary influences blend (colonial heritage)"
+      language: ["Portuguese-speaking concierge essential", "Cape Verdean Creole (Kriolu) staff a bonus"]
+      dietary: standard
+      rate_signal: "Moderate demand from concentrated New England diaspora; unique origin story drives fan travel; standard suite pricing"
+    cuisine_signatures:
+      - { dish: "Cachupa (slow-cooked hominy, beans, and tuna or pork)", note: "Cape Verde's national dish; distinctive and memorable for non-Cape Verdean guests" }
+      - { dish: "Grilled fresh fish with mojos sauce", note: "Island seafood tradition; fresh execution essential" }
+      - { dish: "Grogue cocktail program (sugarcane spirit, similar to cachaça)", note: "Cape Verde's defining spirit; premium positioning possible for specialty cocktail menu" }
+    diaspora_travel_signal:
+      origin_pattern: "Massachusetts and Rhode Island domestic very heavy; direct from Praia (long haul)"
+      dining_pattern: "Community-oriented; late evening; music and dancing expected at social events; cachupa as communal anchor"
+    recent_form_summary: "Four-match recent run shows two commanding friendly wins over Serbia and Bermuda bookending a penalty draw with Finland and a 4-2 loss to Chile."
+
+  IRQ:
+    name: Iraq
+    fifa_rank: 54
+    us_diaspora:
+      population_millions: 0.20
+      primary_concentrations: [Michigan, California, Illinois, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red, white, black, and green
+      notable_traditions:
+        - "Strong Dearborn MI Iraqi-American community drives domestic travel"
+        - "Lions of Mesopotamia have passionate diaspora following"
+        - "Arab solidarity culture extends fan support to other Arab national teams"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu required across all protein options"
+        - "Iraqi and Middle Eastern cuisine (masgouf, biryani, kebab)"
+        - "Arabic tea service with cardamom"
+      language: ["Arabic-speaking concierge essential", "Iraqi Arabic dialect familiarity a plus"]
+      dietary: halal
+      rate_signal: "Moderate demand driven by Michigan-concentrated diaspora; halal execution quality critical; standard-to-moderate suite pricing"
+    cuisine_signatures:
+      - { dish: "Masgouf (open-fire grilled carp with spices)", note: "Iraq's most iconic dish; remarkable differentiation from standard Middle Eastern menus" }
+      - { dish: "Iraqi kebab and tikka platter", note: "Crowd-pleasing halal grill format; accessible execution" }
+      - { dish: "Kleicha (date and cardamom cookies) and Arabic tea service", note: "Traditional Iraqi hospitality signal; low cost, very high cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "Michigan (Dearborn) primary; California secondary; direct from Baghdad"
+      dining_pattern: "Communal family-style; halal mandatory; tea throughout; late evening; generous hospitality expectations"
+    recent_form_summary: "Four wins and a draw across last five fixtures, including a World Cup intercontinental play-off victory over Bolivia and a striking 1-1 draw with Spain in June 2026."
+
+  JOR:
+    name: Jordan
+    fifa_rank: 69
+    us_diaspora:
+      population_millions: 0.06
+      primary_concentrations: [New York, New Jersey, California, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: red, white, black, and green
+      notable_traditions:
+        - "Nashama (Jordan national team) fan culture emerging with AFC success"
+        - "Arab solidarity at matches; multi-team supporter culture"
+        - "Asian Cup 2023 finalists — historic achievement driving new fan engagement"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu required"
+        - "Jordanian and Levantine cuisine (mansaf, falafel, maqluba)"
+        - "Arabic coffee and mint tea service"
+      language: ["Arabic-speaking concierge essential", "English widely spoken by Jordanian diaspora"]
+      dietary: halal
+      rate_signal: "Low demand; very small US diaspora; any Jordanian visitors likely to be business travelers — standard pricing"
+    cuisine_signatures:
+      - { dish: "Mansaf (lamb slow-cooked in fermented yogurt over rice)", note: "Jordan's national dish and ultimate hospitality gesture; powerful cultural signal" }
+      - { dish: "Falafel and hummus mezze station", note: "Levantine staple; accessible and universally appealing halal option" }
+      - { dish: "Arabic coffee and mint tea service", note: "Hospitality non-negotiable; sets immediate cultural respect signal" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light domestic; direct from Amman — very small US-side traveling contingent"
+      dining_pattern: "Halal strictly; communal family-style; mansaf as celebratory centerpiece; tea and coffee throughout"
+    recent_form_summary: "Five-match winless run across mid-2025 to mid-2026, with heavy losses to Switzerland and Colombia bookending draws against Nigeria and Costa Rica."
+
+  AUT:
+    name: Austria
+    fifa_rank: 26
+    us_diaspora:
+      population_millions: 0.70
+      primary_concentrations: [New York, California, Pennsylvania, Ohio, Wisconsin]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Österreich fans organized and beer-forward; Wunderteam history revived with modern squad"
+        - "Shared German-language cultural affinity with German fans"
+        - "Strong domestic Bundesliga fan culture transfers to national team"
+    hospitality_notes:
+      fnb_priorities:
+        - "Wiener Schnitzel station (veal or pork)"
+        - "Austrian wine program (Grüner Veltliner, Blaufränkisch)"
+        - "Austrian pastry station (Apfelstrudel, Sachertorte)"
+      language: ["English universally sufficient", "German-speaking concierge appreciated"]
+      dietary: standard
+      rate_signal: "Moderate demand; Austrian-American diaspora concentrated in East Coast and Midwest; wine program strong upsell"
+    cuisine_signatures:
+      - { dish: "Wiener Schnitzel station with lingonberry and potato salad", note: "Austria's most globally recognized dish; premium veal version for suites" }
+      - { dish: "Sachertorte chocolate cake station", note: "Vienna's iconic confection; strong novelty and recognition factor" }
+      - { dish: "Grüner Veltliner and Blaufränkisch wine flight", note: "Austria's world-class but under-known wines; sommelier conversation starter" }
+    diaspora_travel_signal:
+      origin_pattern: "New York and Pennsylvania domestic; direct from Vienna"
+      dining_pattern: "Café culture expectations; wine-and-pastry forward; Gemütlichkeit (cozy) atmosphere preference; moderate pace"
+    recent_form_summary: "Three consecutive friendly wins heading into 2026, including a dominant 5–1 victory over Ghana and clean sheets against Tunisia and South Korea."
+
+  ALG:
+    name: Algeria
+    fifa_rank: 34
+    us_diaspora:
+      population_millions: 0.04
+      primary_concentrations: [New York, California, Virginia, Illinois]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: green and white
+      notable_traditions:
+        - "2019 AFCON champions; Fennec Foxes passionate fan base"
+        - "Very large North African diaspora in France supplements international support"
+        - "Riyad Mahrez era drives global following"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu required across all protein options"
+        - "North African cuisine (couscous, tagine, merguez)"
+        - "Mint tea and Maghrebi coffee service"
+      language: ["French-speaking concierge essential", "Arabic-speaking staff strongly valued"]
+      dietary: halal
+      rate_signal: "Moderate demand; small US diaspora but passionate; large French-based contingent may travel for US games; halal quality critical"
+    cuisine_signatures:
+      - { dish: "Couscous with merguez and seven-vegetable sauce", note: "Algeria's national dish; authentic North African hospitality signal" }
+      - { dish: "Chorba frik (green wheat and lamb soup)", note: "Traditional Algerian comfort food; powerful diaspora nostalgia trigger" }
+      - { dish: "Mint tea service with Algerian pastries (baklava, makroud)", note: "Maghrebi hospitality ritual; inexpensive, very high cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light US-domestic; substantial contingent expected direct from Paris and Algiers"
+      dining_pattern: "Communal family-style; halal mandatory; mint tea throughout; late evening; festive atmosphere"
+    recent_form_summary: "Sharp recent form highlighted by a 7-0 dismantling of Guatemala and a notable 1-0 friendly win over Netherlands, with a goalless draw against Uruguay the only blemish."
+
+  GHA:
+    name: Ghana
+    fifa_rank: 63
+    us_diaspora:
+      population_millions: 0.10
+      primary_concentrations: [New York, Maryland, Ohio, Georgia, Virginia]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: red, gold, green, and black star
+      notable_traditions:
+        - "Black Stars among Africa's most globally followed clubs"
+        - "Ghana jollof rice cultural rivalry with Nigeria — great social media fodder"
+        - "Passionate, music-forward supporter atmosphere with drums and dance"
+    hospitality_notes:
+      fnb_priorities:
+        - "Ghanaian and West African cuisine (jollof rice, fufu, kelewele)"
+        - "Standard protein options; halal available as subset"
+        - "Ghanaian beer (Star) or West African lager program"
+      language: ["English official; Ghanaian English concierge", "Twi-speaking staff a plus"]
+      dietary: standard
+      rate_signal: "High travel propensity from engaged diaspora; jollof rice rivalry moment creates social marketing opportunity; standard-to-moderate suite pricing"
+    cuisine_signatures:
+      - { dish: "Ghanaian jollof rice station", note: "Ghana vs Nigeria jollof debate is gold for social engagement — play it up in suite theming" }
+      - { dish: "Kelewele (spiced fried plantain) station", note: "Ghanaian street food; crowd pleaser, easy execution" }
+      - { dish: "Groundnut soup with fufu", note: "Traditional Ghanaian staple; powerful nostalgia for diaspora fans" }
+    diaspora_travel_signal:
+      origin_pattern: "New York, Maryland, Ohio, Atlanta domestic; direct from Accra"
+      dining_pattern: "Communal and festive; music-forward atmosphere; jollof rice as social centerpiece; evening preference"
+    recent_form_summary: "Four-match friendly run yields one draw and three losses, including a 5-1 defeat to Austria and narrow losses to Germany and Mexico."
+
+  PAN:
+    name: Panama
+    fifa_rank: 74
+    us_diaspora:
+      population_millions: 0.20
+      primary_concentrations: [Florida, New York, New Jersey, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: red and blue
+      notable_traditions:
+        - "Los Canaleros passionate and vocal; first World Cup (2018) a proud national moment"
+        - "Strong Florida Panamanian diaspora drives domestic travel"
+        - "Reggaeton and salsa music central to fan social events"
+    hospitality_notes:
+      fnb_priorities:
+        - "Panamanian cuisine (sancocho, ceviche, ropa vieja)"
+        - "Seco Herrerano (Panamanian spirit) cocktail program"
+        - "Tropical fruit juices and chicha as non-alcoholic program"
+      language: ["Spanish-speaking concierge essential"]
+      dietary: standard
+      rate_signal: "High travel propensity; Florida-concentrated diaspora easily reaches Southeast US venues; moderate suite pricing"
+    cuisine_signatures:
+      - { dish: "Sancocho de gallina (Panamanian chicken soup)", note: "Panama's national dish; hearty, warming, deeply nostalgic for diaspora" }
+      - { dish: "Panama-style ceviche (corvina with leche de tigre)", note: "Crowd pleaser; Central American seafood tradition" }
+      - { dish: "Seco Herrerano cocktail program", note: "Panama's iconic sugarcane spirit; distinctive regional identity" }
+    diaspora_travel_signal:
+      origin_pattern: "Florida (Miami, Orlando, Jacksonville) primary; New York secondary; direct from Panama City"
+      dining_pattern: "Festive communal style; music-forward; late evening; ceviche as social anchor; family gatherings"
+    recent_form_summary: "Recent run shows mixed form—a heavy loss to Brazil offset by wins over Dominican Republic and South Africa, with a draw against Bosnia & Herzegovina heading into the tournament."
+
+  IRN:
+    name: Iran
+    fifa_rank: 22
+    us_diaspora:
+      population_millions: 0.50
+      primary_concentrations: [California, New York, Texas, Virginia, Maryland]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: white, red, and green
+      notable_traditions:
+        - "Team Melli large and passionate diaspora following"
+        - "California (LA — \"Tehrangeles\") Iranian-American community among the most concentrated globally"
+        - "Sanctions and travel complexity reduce volume; fans who come are deeply committed"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu required"
+        - "Persian cuisine (kabab koobideh, ghormeh sabzi, saffron rice)"
+        - "Persian tea (chai) service with sugar cubes"
+      language: ["Farsi-speaking concierge strongly recommended", "English widely spoken by Iranian-American diaspora"]
+      dietary: halal
+      rate_signal: "Moderate demand; large California diaspora but sanctions reduce international arrival volume; diaspora fans spend well on premium experiences"
+    cuisine_signatures:
+      - { dish: "Kabab koobideh and joojeh kabab platter over saffron rice", note: "Iran's most iconic dishes; saffron rice is the defining flavor marker" }
+      - { dish: "Ghormeh sabzi (herb, kidney bean, and lamb stew)", note: "Persian comfort food; deep nostalgia for diaspora community" }
+      - { dish: "Persian chai (black tea) with rock candy and saffron sweets", note: "Iranian hospitality ritual; inexpensive but very high cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "California (Los Angeles) overwhelmingly dominant; Texas and Virginia secondary; sanctions limit direct international arrivals"
+      dining_pattern: "Saffron-forward Persian cuisine; halal mandatory; communal family-style; tea throughout; late evening preference"
+    recent_form_summary: "Four wins in last five across recent friendlies, including a 5-0 rout of Costa Rica; lone defeat came against Nigeria in March 2026."
+
+  TUN:
+    name: Tunisia
+    fifa_rank: 41
+    us_diaspora:
+      population_millions: 0.04
+      primary_concentrations: [New York, California, Virginia, Illinois]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red and white
+      notable_traditions:
+        - "Eagles of Carthage passionate fan base; AFCON perennial contender"
+        - "Large North African diaspora in France supplements international attendance"
+        - "Harissa cuisine culture is a global identity marker"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu required"
+        - "Tunisian North African cuisine (brik, couscous, harissa)"
+        - "Mint tea and Maghrebi coffee service"
+      language: ["French-speaking concierge essential", "Arabic-speaking staff valued"]
+      dietary: halal
+      rate_signal: "Moderate demand; small US diaspora; large French contingent may travel; standard suite pricing with halal quality premium"
+    cuisine_signatures:
+      - { dish: "Brik (fried pastry with egg, tuna, and harissa)", note: "Tunisia's most iconic street food; delightful novelty for non-North African guests" }
+      - { dish: "Couscous with harissa lamb and merguez", note: "Quintessential Tunisian flavor profile; harissa heat level customizable for mixed audiences" }
+      - { dish: "Mint tea service with Tunisian sweets (makroud, baklawa)", note: "Hospitality ritual; low cost, high cultural resonance" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light US domestic; primary contingent expected from Paris and Tunis directly"
+      dining_pattern: "Communal family-style; halal mandatory; mint tea and pastries throughout; late dining"
+    recent_form_summary: "Four recent friendlies yield one win against Haiti, two losses including a 5-0 defeat to Belgium, and a draw with Canada ahead of the 2026 World Cup."
+
+  TUR:
+    name: Türkiye
+    fifa_rank: 30
+    us_diaspora:
+      population_millions: 0.20
+      primary_concentrations: [New York, New Jersey, California, Florida, Texas]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: high
+      color_signal: red and white
+      notable_traditions:
+        - "Crescentstar organized supporter groups; Euro 2024 QF run drives fan surge"
+        - "Turkish tea and coffee culture deeply embedded in social gatherings"
+        - "Passionate and vocal; fan atmosphere among Europe's most intense"
+    hospitality_notes:
+      fnb_priorities:
+        - "Halal-certified menu strongly preferred (majority Muslim fan base)"
+        - "Turkish kebab and grill station (doner, adana, iskender)"
+        - "Turkish coffee and çay (tea) service with baklava"
+      language: ["Turkish-speaking concierge strongly recommended", "English sufficient for younger fans"]
+      dietary: halal
+      rate_signal: "High travel propensity; New York/New Jersey Turkish community active; Euro 2024 QF momentum drives premium suite interest"
+    cuisine_signatures:
+      - { dish: "Mixed Turkish kebab platter (adana, urfa, chicken şiş) with lavash", note: "Turkey's defining grill culture; authentic charcoal cooking preferred" }
+      - { dish: "Turkish coffee and çay service with baklava station", note: "Non-negotiable hospitality anchors; baklava premium execution lifts perceived value" }
+      - { dish: "İskender kebab station (doner over pide with tomato butter sauce)", note: "Turkey's iconic signature dish; impressive suite centerpiece" }
+    diaspora_travel_signal:
+      origin_pattern: "New York and New Jersey domestic primary; direct from Istanbul and Ankara"
+      dining_pattern: "Late dining; communal and generous hospitality culture; tea throughout; kebab as social centerpiece"
+    recent_form_summary: "Euro 2024 quartefinalists — strongest tournament run in decades; Arda Güler and Hakan Çalhanoğlu generation at peak entering 2026."
+
+  PAR:
+    name: Paraguay
+    fifa_rank: 51
+    us_diaspora:
+      population_millions: 0.02
+      primary_concentrations: [Florida, New York, California]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: moderate
+      color_signal: red, white, and blue
+      notable_traditions:
+        - "Albirroja small but spirited traveling support"
+        - "Tereré (cold herbal mate) drinking culture is a defining national identity"
+        - "Asado culture shared with Argentine/Uruguayan fans"
+    hospitality_notes:
+      fnb_priorities:
+        - "Paraguayan asado (grilled meats) station"
+        - "Tereré station (cold mate with medicinal herbs) as cultural marker"
+        - "Empanada and chipá (cheese bread) station"
+      language: ["Spanish-speaking concierge", "Guaraní context useful but not critical"]
+      dietary: standard
+      rate_signal: "Moderate demand; very small diaspora limits volume; tereré station is a distinctive low-cost differentiator"
+    cuisine_signatures:
+      - { dish: "Paraguayan asado station (beef, pork, chorizo)", note: "South American grill tradition; similar to Argentine but distinct regional cuts" }
+      - { dish: "Chipá (Paraguayan cheese and cassava bread)", note: "Paraguay's most recognizable food export; gluten-free, crowd-pleasing" }
+      - { dish: "Tereré station (cold mate with yuyos herbs)", note: "Uniquely Paraguayan; dramatic conversation starter; free marketing moment" }
+    diaspora_travel_signal:
+      origin_pattern: "Very light domestic; direct from Asunción — small contingent"
+      dining_pattern: "Communal family-style; asado as social focal point; tereré drinking communal and continuous"
+    recent_form_summary: "Three wins in last five including away result in Greece and a qualification victory over Peru, offset by a friendly loss to Morocco."
+
+  SCO:
+    name: Scotland
+    fifa_rank: 44
+    us_diaspora:
+      population_millions: 5.40
+      primary_concentrations: [California, Texas, North Carolina, New York, Georgia]
+      georgia_concentration: moderate
+    fan_culture:
+      travel_propensity: high
+      color_signal: dark blue and white
+      notable_traditions:
+        - "Tartan Army world-famous for friendly, kilted, traveling support — among the most beloved in football"
+        - "Scottish whisky culture central to fan gatherings"
+        - "Large Scottish-American diaspora across entire US; Clan societies add premium hospitality angle"
+    hospitality_notes:
+      fnb_priorities:
+        - "Premium Scottish whisky tasting (single malt Scotch program)"
+        - "Elevated haggis station (Burns Supper format)"
+        - "Scottish beer program (Tennent's, Innis & Gunn)"
+      language: ["English (Scottish accents; no concierge translation needed)"]
+      dietary: standard
+      rate_signal: "High travel propensity from massive Scottish-American diaspora; Tartan Army whisky culture drives premium beverage spend significantly"
+    cuisine_signatures:
+      - { dish: "Premium single malt Scotch whisky tasting (Highlands, Speyside, Islay)", note: "Scotland's greatest cultural export; highest-margin beverage program possible" }
+      - { dish: "Elevated haggis with neeps and tatties (Burns Supper format)", note: "Iconic Scottish dish; excellent conversation starter for non-Scots; premium venison version available" }
+      - { dish: "Scottish smoked salmon and oatcake station", note: "Premium cold station; world-class Scottish salmon a recognized luxury signal" }
+    diaspora_travel_signal:
+      origin_pattern: "Nationwide domestic — Scottish-American diaspora distributed across all 50 states; Tartan Army international arrivals from Glasgow and Edinburgh"
+      dining_pattern: "Pub-culture expectations; whisky-forward; early-to-mid evening; Tartan Army famous for singing and camaraderie; generous hospitality expectations"
+    recent_form_summary: "Bounced back from back-to-back friendly losses to Japan and Ivory Coast with commanding wins over Curaçao and Bolivia heading into the tournament."
+
+  CUW:
+    name: Curaçao
+    fifa_rank: 85
+    us_diaspora:
+      population_millions: 0.005
+      primary_concentrations: [Florida, New York, New Jersey]
+      georgia_concentration: low
+    fan_culture:
+      travel_propensity: low
+      color_signal: blue and yellow
+      notable_traditions:
+        - "Marchena-era squad punching above weight in CONCACAF"
+        - "Dutch Caribbean cultural identity; bilingual Dutch/Papiamentu fan culture"
+        - "Small but proud diaspora; festive Caribbean atmosphere"
+    hospitality_notes:
+      fnb_priorities:
+        - "Curaçaoan cuisine (keshi yena, funchi, kabritu stoba)"
+        - "Curaçao liqueur cocktail program (Blue Curaçao origin story is from this island)"
+        - "Caribbean seafood and tropical fare"
+      language: ["Dutch and English both sufficient", "Papiamentu-speaking staff a distinctive plus"]
+      dietary: standard
+      rate_signal: "Very low demand; tiny diaspora; treat as niche interest; Blue Curaçao cocktail program is a charming low-cost differentiator"
+    cuisine_signatures:
+      - { dish: "Keshi yena (Dutch Edam cheese stuffed with spiced chicken stew)", note: "Curaçao's most iconic dish; fascinating culinary history; high novelty factor" }
+      - { dish: "Funchi (Curaçaoan polenta) with kabritu stoba (goat stew)", note: "Traditional island staple; distinctive Caribbean-Dutch fusion" }
+      - { dish: "Blue Curaçao cocktail station (using authentic island-made liqueur)", note: "Incredible marketing angle — the drink is named after this country; signature suite cocktail opportunity" }
+    diaspora_travel_signal:
+      origin_pattern: "Extremely light; Florida and New York domestic; direct from Willemstad — very small contingent"
+      dining_pattern: "Caribbean relaxed atmosphere; Dutch-influenced hospitality expectations; Blue Curaçao cocktail as social novelty anchor"
+    recent_form_summary: "CONCACAF Nations League competitive; first World Cup qualification would be historic; Leandro Bacuna era player quality improving."

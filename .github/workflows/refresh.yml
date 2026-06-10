@@ -1,0 +1,98 @@
+name: refresh-match-data
+
+on:
+  schedule:
+    # Group-stage cadence: hourly on the hour. Acts during pre_tournament + group_stage.
+    # Brief signatures only flip on ≥5pp probability shifts / top-1 changes / feeder
+    # flips, which don't move faster than this. Hourly stays comfortably ahead of
+    # human decision cycles for hotel ops planning.
+    - cron: "0 * * * *"
+    # Knockout cadence: every 30 min. Acts during R32 → finals.
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Determine cadence from cron
+        id: cadence
+        run: |
+          # GitHub Actions sets github.event.schedule to the exact cron string
+          # that triggered this run, so we can distinguish the two schedules
+          # cleanly even when both fire at the same minute mark (:00).
+          #
+          # Match each known cron explicitly. An unknown SCHEDULE means the cron
+          # entries above were edited without updating this mapping — fail loudly
+          # so we don't silently mis-label runs and waste a phase's worth of
+          # refreshes no-opping under the wrong cadence gate.
+          SCHEDULE='${{ github.event.schedule }}'
+          case "$SCHEDULE" in
+            "0 * * * *")
+              CADENCE=group_stage
+              ;;
+            "*/30 * * * *")
+              CADENCE=knockouts
+              ;;
+            "")
+              # workflow_dispatch leaves schedule empty. The run step bypasses
+              # cadence gating for manual dispatch, so the label is unused — emit
+              # a well-formed sentinel anyway.
+              CADENCE=group_stage
+              ;;
+            *)
+              echo "::error::Unknown schedule '$SCHEDULE' — refresh.yml cron entries and cadence detection are out of sync."
+              exit 1
+              ;;
+          esac
+          echo "cadence=$CADENCE" >> "$GITHUB_OUTPUT"
+          echo "Cadence selected: $CADENCE (from schedule='$SCHEDULE')"
+
+      - uses: astral-sh/setup-uv@v8.2.0
+        with:
+          version: latest
+
+      - name: uv sync
+        run: uv sync
+
+      - name: Run refresh
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Manual run: skip cadence gating, refresh regardless of phase.
+            uv run python -m backend.refresh
+          else
+            uv run python -m backend.refresh --cadence "${{ steps.cadence.outputs.cadence }}"
+          fi
+
+      # matches.json is gitignored in this repo so contributors never commit
+      # fetched provider data by accident. Deployments that opt in to serving
+      # the data from the repo (see README "Data licensing") force-add it here;
+      # --ignored=matching makes the no-change check see the ignored file on
+      # the first run, before it's ever been tracked.
+      - name: Commit changed matches.json
+        run: |
+          if [ -z "$(git status --porcelain --ignored=matching site/data/matches.json)" ]; then
+            echo "no changes to matches.json — exiting cleanly"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f site/data/matches.json
+          git commit -m "refresh: matches.json at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Use --rebase to handle the rare case where another workflow pushed during our run
+          git pull --rebase origin main
+          git push origin main

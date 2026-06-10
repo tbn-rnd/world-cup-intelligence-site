@@ -1,0 +1,94 @@
+[
+  {
+    "id": "evt-usa-por",
+    "sport_key": "soccer_fifa_world_cup",
+    "commence_time": "2026-03-31T16:00:00Z",
+    "home_team": "United States",
+    "away_team": "Portugal",
+    "bookmakers": [
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              { "name": "United States", "price": 3.50 },
+              { "name": "Portugal",      "price": 2.00 },
+              { "name": "Draw",          "price": 3.40 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-rsa-cze",
+    "sport_key": "soccer_fifa_world_cup",
+    "commence_time": "2026-06-18T16:00:00Z",
+    "home_team": "South Africa",
+    "away_team": "Czech Republic",
+    "bookmakers": [
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              { "name": "South Africa",   "price": 2.50 },
+              { "name": "Czech Republic", "price": 2.80 },
+              { "name": "Draw",           "price": 3.20 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-mar-hai",
+    "sport_key": "soccer_fifa_world_cup",
+    "commence_time": "2026-06-24T22:00:00Z",
+    "home_team": "Morocco",
+    "away_team": "Haiti",
+    "bookmakers": [
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              { "name": "Morocco", "price": 1.30 },
+              { "name": "Haiti",   "price": 9.00 },
+              { "name": "Draw",    "price": 5.50 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-uzb-cod",
+    "sport_key": "soccer_fifa_world_cup",
+    "commence_time": "2026-06-27T23:30:00Z",
+    "home_team": "Uzbekistan",
+    "away_team": "DR Congo",
+    "bookmakers": [
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              { "name": "Uzbekistan", "price": 2.30 },
+              { "name": "DR Congo",   "price": 3.10 },
+              { "name": "Draw",       "price": 3.20 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

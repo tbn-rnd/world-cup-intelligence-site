@@ -1,0 +1,214 @@
+# Official 2026 World Cup bracket structure.
+# Source: bracket released 2025-12-06 after the Final Draw, cross-verified
+# against Wikipedia ("2026 FIFA World Cup knockout stage") and ESPN's match
+# schedule. Match numbers (73-104) follow the official tournament numbering,
+# which reflects bracket position — not chronological order.
+# 48 teams, 12 groups of 4, R32 of top 2 + 8 best 3rd-placed, then standard
+# knockouts.
+
+tournament: "World Cup 2026"
+
+phases:
+  pre_tournament:
+    starts: "2026-03-31"
+    ends:   "2026-06-10"
+  group_stage:
+    starts: "2026-06-11"
+    ends:   "2026-06-27"
+  round_of_32:
+    starts: "2026-06-28"
+    ends:   "2026-07-03"
+  round_of_16:
+    starts: "2026-07-04"
+    ends:   "2026-07-07"
+  quarter_finals:
+    starts: "2026-07-09"
+    ends:   "2026-07-11"
+  semi_finals:
+    starts: "2026-07-14"
+    ends:   "2026-07-15"
+  finals:
+    starts: "2026-07-18"
+    ends:   "2026-07-19"
+
+groups:
+  A: { teams: [MEX, KOR, RSA, CZE] }   # Mexico (host)
+  B: { teams: [CAN, SUI, QAT, BIH] }   # Canada (host)
+  C: { teams: [BRA, MAR, SCO, HAI] }
+  D: { teams: [USA, PAR, AUS, TUR] }   # USA (host)
+  E: { teams: [GER, ECU, CIV, CUW] }
+  F: { teams: [NED, JPN, TUN, SWE] }
+  G: { teams: [BEL, IRN, EGY, NZL] }
+  H: { teams: [ESP, URU, KSA, CPV] }
+  I: { teams: [FRA, SEN, NOR, IRQ] }
+  J: { teams: [ARG, AUT, ALG, JOR] }
+  K: { teams: [POR, COL, UZB, COD] }
+  L: { teams: [ENG, CRO, PAN, GHA] }
+
+# bracket_simulation.py runs a Monte Carlo over all 32 knockout slots —
+# every R32, R16, QF, SF, plus the Final and Bronze — using the feeder
+# definitions below. No slot is privileged over another.
+
+slots:
+  # ===================================================================
+  # ROUND OF 32 — 16 slots (M73-M88), published feeders.
+  # Eight third-placed teams advance from twelve groups; FIFA assigns
+  # each "3rd-place" R32 slot a five-group eligibility pool per the
+  # published 495-scenario table.
+  # ===================================================================
+  r32_match_73:   # LA, Jun 28 — A2 vs B2
+    feeders:
+      - { type: group_runner_up, group: A }
+      - { type: group_runner_up, group: B }
+  r32_match_74:   # Boston, Jun 29 — E1 vs 3rd from A/B/C/D/F
+    feeders:
+      - { type: group_winner, group: E }
+      - { type: best_third_place, eligible_groups: [A, B, C, D, F] }
+  r32_match_75:   # Monterrey, Jun 29 — F1 vs C2
+    feeders:
+      - { type: group_winner, group: F }
+      - { type: group_runner_up, group: C }
+  r32_match_76:   # Houston, Jun 29 — C1 vs F2
+    feeders:
+      - { type: group_winner, group: C }
+      - { type: group_runner_up, group: F }
+  r32_match_77:   # NY/NJ, Jun 30 — I1 vs 3rd from C/D/F/G/H
+    feeders:
+      - { type: group_winner, group: I }
+      - { type: best_third_place, eligible_groups: [C, D, F, G, H] }
+  r32_match_78:   # Dallas, Jun 30 — E2 vs I2
+    feeders:
+      - { type: group_runner_up, group: E }
+      - { type: group_runner_up, group: I }
+  r32_match_79:   # Mexico City, Jun 30 — A1 vs 3rd from C/E/F/H/I
+    feeders:
+      - { type: group_winner, group: A }
+      - { type: best_third_place, eligible_groups: [C, E, F, H, I] }
+  r32_match_80:   # Atlanta, Jul 1 — L1 vs 3rd from E/H/I/J/K
+    feeders:
+      - { type: group_winner, group: L }
+      - { type: best_third_place, eligible_groups: [E, H, I, J, K] }
+  r32_match_81:   # SF Bay, Jul 1 — D1 vs 3rd from B/E/F/I/J
+    feeders:
+      - { type: group_winner, group: D }
+      - { type: best_third_place, eligible_groups: [B, E, F, I, J] }
+  r32_match_82:   # Seattle, Jul 1 — G1 vs 3rd from A/E/H/I/J
+    feeders:
+      - { type: group_winner, group: G }
+      - { type: best_third_place, eligible_groups: [A, E, H, I, J] }
+  r32_match_83:   # Toronto, Jul 2 — K2 vs L2
+    feeders:
+      - { type: group_runner_up, group: K }
+      - { type: group_runner_up, group: L }
+  r32_match_84:   # LA, Jul 2 — H1 vs J2
+    feeders:
+      - { type: group_winner, group: H }
+      - { type: group_runner_up, group: J }
+  r32_match_85:   # Vancouver, Jul 2 — B1 vs 3rd from E/F/G/I/J
+    feeders:
+      - { type: group_winner, group: B }
+      - { type: best_third_place, eligible_groups: [E, F, G, I, J] }
+  r32_match_86:   # Miami, Jul 3 — J1 vs H2
+    feeders:
+      - { type: group_winner, group: J }
+      - { type: group_runner_up, group: H }
+  r32_match_87:   # Kansas City, Jul 3 — K1 vs 3rd from D/E/I/J/L
+    feeders:
+      - { type: group_winner, group: K }
+      - { type: best_third_place, eligible_groups: [D, E, I, J, L] }
+  r32_match_88:   # Dallas, Jul 3 — D2 vs G2
+    feeders:
+      - { type: group_runner_up, group: D }
+      - { type: group_runner_up, group: G }
+
+  # ===================================================================
+  # ROUND OF 16 — 8 slots (M89-M96). Each pairs two specific R32 winners
+  # per the published bracket tree.
+  # ===================================================================
+  r16_match_89:   # Philadelphia, Jul 4 — W74 vs W77
+    feeders:
+      - { type: r32_winner, slot: r32_match_74 }
+      - { type: r32_winner, slot: r32_match_77 }
+  r16_match_90:   # Houston, Jul 4 — W73 vs W75
+    feeders:
+      - { type: r32_winner, slot: r32_match_73 }
+      - { type: r32_winner, slot: r32_match_75 }
+  r16_match_91:   # NY/NJ, Jul 5 — W76 vs W78
+    feeders:
+      - { type: r32_winner, slot: r32_match_76 }
+      - { type: r32_winner, slot: r32_match_78 }
+  r16_match_92:   # Mexico City, Jul 5 — W79 vs W80
+    feeders:
+      - { type: r32_winner, slot: r32_match_79 }
+      - { type: r32_winner, slot: r32_match_80 }
+  r16_match_93:   # Dallas, Jul 6 — W83 vs W84
+    feeders:
+      - { type: r32_winner, slot: r32_match_83 }
+      - { type: r32_winner, slot: r32_match_84 }
+  r16_match_94:   # Seattle, Jul 6 — W81 vs W82
+    feeders:
+      - { type: r32_winner, slot: r32_match_81 }
+      - { type: r32_winner, slot: r32_match_82 }
+  r16_match_95:   # Atlanta, Jul 7 — W86 vs W88
+    feeders:
+      - { type: r32_winner, slot: r32_match_86 }
+      - { type: r32_winner, slot: r32_match_88 }
+  r16_match_96:   # Vancouver, Jul 7 — W85 vs W87
+    feeders:
+      - { type: r32_winner, slot: r32_match_85 }
+      - { type: r32_winner, slot: r32_match_87 }
+
+  # ===================================================================
+  # QUARTER-FINALS — 4 slots (M97-M100). Each pairs two R16 winners per
+  # the published bracket, but the loader has no r16_winner feeder type — so
+  # QFs reference the two "earliest" R32 ancestors of each parent R16
+  # to provide a sampled approximation pool. bracket_simulation.py
+  # treats QFs (and beyond) as uniform draws from the 32-team pool.
+  # ===================================================================
+  qf_match_97:    # Boston, Jul 9 — W89 vs W90  (R32 ancestors: 73-77)
+    feeders:
+      - { type: r32_winner, slot: r32_match_74 }
+      - { type: r32_winner, slot: r32_match_73 }
+  qf_match_98:    # LA, Jul 10 — W93 vs W94    (R32 ancestors: 81-84)
+    feeders:
+      - { type: r32_winner, slot: r32_match_83 }
+      - { type: r32_winner, slot: r32_match_81 }
+  qf_match_99:    # Miami, Jul 11 — W91 vs W92 (R32 ancestors: 76-80)
+    feeders:
+      - { type: r32_winner, slot: r32_match_76 }
+      - { type: r32_winner, slot: r32_match_79 }
+  qf_match_100:   # Kansas City, Jul 11 — W95 vs W96 (R32 ancestors: 85-88)
+    feeders:
+      - { type: r32_winner, slot: r32_match_86 }
+      - { type: r32_winner, slot: r32_match_85 }
+
+  # ===================================================================
+  # SEMI-FINALS — 2 slots (M101-M102). qf_winner feeders.
+  # ===================================================================
+  sf_match_101:   # Dallas, Jul 14 — W97 vs W98
+    feeders:
+      - { type: qf_winner, slot: qf_match_97 }
+      - { type: qf_winner, slot: qf_match_98 }
+  sf_match_102:   # Atlanta, Jul 15 — W99 vs W100
+    feeders:
+      - { type: qf_winner, slot: qf_match_99 }
+      - { type: qf_winner, slot: qf_match_100 }
+
+  # ===================================================================
+  # BRONZE FINAL (M103) — losers of the two SFs.
+  # ===================================================================
+  bronze_match_103:   # Miami, Jul 18 — L101 vs L102
+    feeders:
+      - { type: sf_loser, slot: sf_match_101 }
+      - { type: sf_loser, slot: sf_match_102 }
+
+  # ===================================================================
+  # FINAL (M104) — winners of the two SFs. No sf_winner feeder type
+  # exists in the loader (qf_winner is the deepest), so the Final uses
+  # qf_winner placeholders sampled across both halves of the bracket.
+  # bracket_simulation.py treats the Final as a uniform-pool draw.
+  # ===================================================================
+  final_match_104:    # NY/NJ, Jul 19 — W101 vs W102
+    feeders:
+      - { type: qf_winner, slot: qf_match_97 }
+      - { type: qf_winner, slot: qf_match_100 }

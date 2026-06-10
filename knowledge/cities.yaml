@@ -1,0 +1,20 @@
+# Host-city context for the World Cup 2026 Insight Aggregator.
+
+cities:
+  Atlanta:
+    venue: Mercedes-Benz Stadium
+    venue_address: "1 AMB Drive NW, Atlanta, GA 30313"
+    diaspora_strengths: ["Haitian (high)", "Latin American (moderate)", "African (moderate)"]
+    transport_notes: "MARTA serves stadium directly."
+
+  NY/NJ:
+    venue: MetLife Stadium
+    venue_address: "1 MetLife Stadium Drive, East Rutherford, NJ 07073"
+    diaspora_strengths: ["Mexican", "Dominican", "European (Portuguese, Italian)", "South Asian"]
+    transport_notes: "NJ Transit serves the venue; many premium attendees arrive by car or rideshare from Manhattan."
+
+  Miami:
+    venue: Hard Rock Stadium
+    venue_address: "347 Don Shula Drive, Miami Gardens, FL 33056"
+    diaspora_strengths: ["Haitian (very high)", "Cuban (very high)", "South American (very high)", "Brazilian"]
+    transport_notes: "Tri-Rail to Hialeah Market then shuttle; most premium attendees arrive by car from downtown or Miami Beach."
