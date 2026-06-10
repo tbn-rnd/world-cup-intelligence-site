@@ -38,8 +38,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if not args.path.exists():
-        print(f"ERROR: {args.path} does not exist", file=sys.stderr)
-        return 1
+        # Nothing to guard: matches.json is intentionally uncommitted (built
+        # from provider data, see README). Code-only PRs don't ship it, so its
+        # absence is the normal case, not a coverage regression.
+        print(f"{args.path} not present — nothing to check, skipping.")
+        return 0
 
     populated, total = coverage(args.path)
     if total == 0:
