@@ -4,11 +4,6 @@ Dynamic HTML site that surfaces all 104 World Cup 2026 matches with
 deterministic popularity tiering, deep fan-flow and hospitality context on the
 matches that draw the most interest, and a navigation guide.
 
-See `docs/superpowers/specs/2026-06-01-104-match-expansion-and-product-reframe-design.md`
-for the active design. The earlier
-`docs/superpowers/specs/2026-05-08-world-cup-intelligence-site-design.md`
-is preserved as a historical record of the original venue-portfolio scope.
-
 ## Status
 
 | Plan | Subsystem                                                | State       |
